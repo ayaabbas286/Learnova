@@ -1,0 +1,64 @@
+.header-container{
+  background-color: black;
+}
+.navbar{
+background-color: rgb(21, 21, 21);
+}
+.navbar li a{
+  color: #ffff;
+}
+.search-input {
+  position: relative;
+  background-color: rgb(23, 23, 23);
+  height: 35px;
+
+}
+.input-group-text {
+  background-color: none;
+  color: white;
+  position: absolute;
+}
+.search-container span {
+  background-color: none;
+}
+a {
+  font-weight: 600;
+  font-size: 16px;
+}
+.active {
+  border: 1px solid rgb(255, 111, 0);
+  border-radius: 10px;
+  background-color: rgba(255, 111, 0, 0.042);
+}
+.search-input {
+  position: relative;
+  margin-top: 5px;
+  padding-right: 100px;
+  margin-left: 150px;
+  color: rgb(255, 255, 255);
+}
+.search-input:focus {
+  box-shadow: none;
+  outline: none;
+  border: 1px solid rgb(255, 111, 0);
+}
+
+.search-btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: rgb(255, 111, 0);
+  right: 360px;
+  top: 25px;
+  position: absolute;
+}
+.login-signup-btn {
+  margin-right: 50px;
+  margin-left: -50px;
+}
+.seperator {
+  margin-left: -10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: rgb(61, 61, 61);
+}
+

@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-footer',
   standalone: true,
   imports: [FormsModule],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  templateUrl: './footer.component.html',
+  styleUrl: './footer.component.css'
 })
-export class HomeComponent {
+export class FooterComponent {
 
 }

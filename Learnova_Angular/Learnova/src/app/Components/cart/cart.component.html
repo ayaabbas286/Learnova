@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- [Head content remains the same as your previous code] -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-learning Cart (Dark Mode)</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS for Dark Mode -->
+    <style>
+        /* [Styles remain the same as your previous code] */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            /* Dark background */
+            color: #e0e0e0;
+            /* Light text color */
+            padding-top: 20px;
+        }
+
+        /* Updated Learnova Cart Header */
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .page-header h1 {
+            font-family: 'Georgia', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            /* Professional white */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+
+        .cart-container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #1e1e1e;
+            /* Darker card background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            /* Enhanced shadow for depth */
+        }
+
+        .cart-course {
+            background-color: #2b2b2b;
+            /* Dark card for courses */
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .cart-course:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .cart-course img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .cart-course:hover img {
+            transform: scale(1.05);
+        }
+
+        .cart-total {
+            margin-top: 30px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: right;
+            color: #e0e0e0;
+            /* Light color for total */
+        }
+
+        .cart-btns {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .btn-danger {
+            color: white;
+            background-color: #dc3545;
+            border-color: #dc3545;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4);
+        }
+
+        .btn-outline-secondary {
+            color: #e0e0e0;
+            /* Light color for outline */
+            border-color: #6c757d;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .btn-outline-secondary:hover {
+            color: white;
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            color: #ffffff;
+            /* White color for buttons */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        /* Empty cart message */
+        .empty-cart-message {
+            text-align: center;
+            font-size: 1.75rem;
+            margin-top: 20px;
+            color: #17a2b8;
+            display: none;
+            padding: 20px;
+            background-color: #343a40;
+            /* Darker background for empty message */
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            font-family: 'Georgia', serif;
+            opacity: 0;
+        }
+
+        .empty-cart-message.show {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .empty-cart-message i {
+            margin-right: 10px;
+        }
+
+        /* Offer Card Styles */
+        .offer-card {
+            background-color: #444;
+            color: #f5f5f5;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border: none;
+        }
+
+        .offer-card .card-title {
+            font-weight: 700;
+            color: #ffffff;
+            /* White color for card title */
+        }
+
+        .offer-card .card-text {
+            color: #ddd;
+            /* Light color for card text */
+            margin-bottom: 20px;
+        }
+
+        .offer-card .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+            color: #f5f5f5;
+            /* Light color for button */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .offer-card .btn-success:hover {
+            background-color: #218838;
+            box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+        }
+
+        .offer-card svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Utility Classes */
+        .icon {
+            font-size: 1.25rem;
+            margin-right: 5px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cartContainer = document.querySelector('.cart-container');
+            const emptyCartMessage = document.createElement('p');
+            emptyCartMessage.classList.add('empty-cart-message');
+            emptyCartMessage.innerHTML = '<i class="fas fa-info-circle"></i> Your cart is currently empty. <br> <small>Start adding courses to invest in your future!</small>';
+            cartContainer.prepend(emptyCartMessage);
+
+            document.querySelectorAll('.remove-course').forEach(course => {
+                course.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const cartCourse = this.closest('.cart-course');
+                    cartCourse.remove();
+
+                    // Check if any courses remain in the cart
+                    const remainingCourses = document.querySelectorAll('.cart-course');
+                    if (remainingCourses.length === 0) {
+                        emptyCartMessage.classList.add('show'); // Show the empty cart message with effects
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Professional Header for Learnova Cart -->
+    <div class="page-header">
+        <h1><i class="fas fa-shopping-cart icon"></i> Learnova Cart</h1>
+    </div>
+
+    <div class="container cart-container">
+        <!-- Cart Courses -->
+        <div *ngFor="let course of cartCourses" class="cart-course row">
+            <div class="col-md-3">
+                <img src="course.image" alt="course.name Image" class="img-fluid">
+            </div>
+            <div class="col-md-9 course-details">
+                <div>
+                    <h5>(course.name)</h5>
+                    <p>(course.instructor)</p>
+                </div>
+                <div>
+                    <p class="font-weight-bold">(course.price | currency)</p>
+                    <p>
+                        <a href="#" class="text-danger remove-course"><i class="fas fa-trash icon"></i> Remove</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Total -->
+        <div class="cart-total">
+            <p>Total: (totalPrice | currency)</p>
+        </div>
+
+        <!-- Cart Buttons -->
+        <div class="cart-btns">
+            <a href="#" class="btn btn-outline-secondary"><i class="fas fa-arrow-left icon"></i> Continue Shopping</a>
+            <a href="#" class="btn btn-primary"><i class="fas fa-credit-card icon"></i> Checkout</a>
+        </div>
+
+        <!-- Offer for Annual Subscription -->
+        <div class="offer-card card mt-4">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <!-- Replaced Placeholder SVG with a Suitable Upgrade Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="img-fluid rounded-start"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 0a8 8 0 1 0 8 8A8 8 0 0 0 8 0zm.93 4.588l2.36 2.36a.5.5 0 0 1-.707.708L8.5 6.207V11.5a.5.5 0 0 1-1 0V6.207L5.417 7.656a.5.5 0 0 1-.708-.708l2.361-2.36a.5.5 0 0 1 .707 0z" />
+                    </svg>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Upgrade to Annual Subscription</h5>
+                        <p class="card-text">Get access to all courses for a whole year at a discounted price!</p>
+                        <!-- Restored icon on the Upgrade Now button -->
+                        <a href="#" class="btn btn-success"><i class="fas fa-arrow-up icon"></i> Upgrade Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Empty Cart Message -->
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<div class="header-container sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="height: 70px">
+    <a class="navbar-brand" routerLink="/"
+      ><img
+        src="/Images/Logo/n-logo.png"
+        style="height: 5rem; margin-left: 40px"
+        alt=""
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+      class="collapse navbar-collapse d-flex justify-content-around"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="active"
+            aria-current="page"
+            routerLink="/"
+            >Home</a
+          >
+        </li>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            routerLink="/courses"
+            routerLinkActive="active"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Courses
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a
+              class="dropdown-item"
+              routerLinkActive="active"
+              routerLink="/courses"
+              >Action</a
+            >
+            <a
+              class="dropdown-item"
+              routerLinkActive="active"
+              routerLink="/courses"
+              >Another action</a
+            >
+            <div class="dropdown-divider"></div>
+            <a
+              class="dropdown-item"
+              routerLinkActive="active"
+              routerLink="/courses"
+              >Something else here</a
+            >
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="/instructors"
+            >Our Instructors</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/about-us"
+            >About Us</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/cart"
+            >Cart</a
+          >
+        </li>
+      </ul>
+      <form class="search-container form-inline d-flex my-2 my-lg-0">
+        <input
+          type="text"
+          placeholder="search ..."
+          aria-label="Search"
+          class="form-control search-input "
+        />
+        <button type="submit" class="search-btn ">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+
+      <div class="login-signup-btn">
+        <ul class="navbar-nav mr-auto">
+          <span class="seperator">|</span>
+
+          <li class="nav-item">
+            <a
+              class="nav-link active btn"
+              routerLinkActive="active"
+              aria-current="page"
+              routerLink="/login"
+              >Login</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active btn"
+              routerLinkActive="active"
+              aria-current="page"
+              routerLink="/register"
+              ><i class="fa-regular fa-user"></i> Register</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active notify-btn"
+              routerLinkActive="active"
+              aria-current="page"
+              routerLink="/notifications"
+              ><i class="fa-solid fa-bell"></i></a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active notify-btn"
+              routerLinkActive="active"
+              aria-current="page"
+              routerLink="/ar"
+              ><i class="fa-solid fa-globe"></i> En
+              </a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
