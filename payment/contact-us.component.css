@@ -1,0 +1,56 @@
+.customcard{
+  height: 75%;
+
+}
+
+/*circle right symbol*/
+.circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background-color:  #0a8db1;
+   border-radius: 50%;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.padge{
+  border: none;
+  width: 35% !important;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  background-color: #0a8db1;
+  margin-top:-10px; /* push the wrap down a bit. You might not need this */
+  margin-left: 75%;
+
+}
+.active{
+  border:solid 2px lightblue;
+
+}
+.nonactive{
+  border: none;
+
+}
+.displayright{
+  display: block;
+}
+.txtcolor{
+  color: #0a8db1;
+}
+div svg{
+  padding-right: 10px;
+}
+
+/*charged text */
+
