@@ -1,5 +1,7 @@
 .header-container{
   background-color: black;
+  box-shadow: 0px 4px 10px rgba(91, 91, 91, 0.2);
+
 }
 .navbar{
 background-color: rgb(21, 21, 21);
