@@ -9,6 +9,8 @@ import { RegisterComponent } from './Components/register/register.component';
 import { NotificationsComponent } from './Components/notifications/notifications.component';
 import { ArLanguageComponent } from './Components/ar-language/ar-language.component';
 import { CartComponent } from './Components/cart/cart.component';
+import { ContactUSComponent } from './Components/payment/contact-us.component';
+import { BackupComponent } from './Components/backup/backup.component';
 
 export const routes: Routes = [
   {path: '', component:HomeComponent},
@@ -17,6 +19,10 @@ export const routes: Routes = [
   {path: 'instructors', component:InstructorsComponent},
   {path: 'login', component:LoginComponent},
   {path: 'notifications', component:NotificationsComponent},
+  {path: 'contact-us', component:ContactUSComponent},
+  {path: 'back-up', component:BackupComponent},
+
+
   {path: 'cart', component:CartComponent},
 
   {path: 'ar', component:ArLanguageComponent},
