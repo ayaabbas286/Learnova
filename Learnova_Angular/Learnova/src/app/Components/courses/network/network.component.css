@@ -1,0 +1,58 @@
+
+/* إعداد تصميم البطاقات */
+.card {
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+img{
+  height: 150px;
+}
+@media (max-height: 600px) {
+  .card {
+    font-size: 14px; /* تصغير حجم النص على الشاشات الصغيرة */
+  }
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgb(255, 111, 0);
+}
+.card-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card-instructor {
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+.btn {
+  background-color: rgb(255, 111, 0);
+
+  margin-right: 15px; /* مسافة بين الأزرار */
+}
+/* إعداد الشبكة */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* الأعمدة تتكيف مع حجم الشاشة */
+  gap: 20px; /* مسافة بين البطاقات */
+  padding: 20px; /* مسافة داخلية حول الشبكة */
+  background-color: #000000;
+
+}
+@media (max-width: 600px) {
+  .card {
+    font-size: 14px; /* تصغير حجم النص على الشاشات الصغيرة */
+  }
+}
