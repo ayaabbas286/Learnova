@@ -1,0 +1,21 @@
+.container {
+  background-color: #000;
+  padding: 20px;
+}
+
+.expert-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+.expert-card h5 {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.expert-card p {
+  font-size: 0.85rem;
+  color: white !important;
+}
