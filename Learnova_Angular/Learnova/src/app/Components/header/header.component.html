@@ -1,4 +1,4 @@
-<div class="header-container sticky-top">
+<!-- <div class="header-container sticky-top">
   <nav class="navbar navbar-expand-lg navbar-dark" style="height: 70px">
     <a class="navbar-brand" routerLink="/"
       ><img
@@ -9,20 +9,16 @@
     <button
       class="navbar-toggler"
       type="button"
-      data-toggle="collapse"
-      data-target="#navbarSupportedContent"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent"
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div
-      class="collapse navbar-collapse d-flex justify-content-around"
-      id="navbarSupportedContent"
-    >
-      <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto  d-flex justify-content-around" >
         <li class="nav-item">
           <a
             class="nav-link active"
@@ -37,7 +33,7 @@
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
-            href="#"
+            routerLink="/"
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
@@ -45,10 +41,12 @@
             Dropdown
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" routerLink="/">Action</a></li>
+            <li><a class="dropdown-item" routerLink="/">Another action</a></li>
             <li><hr class="dropdown-divider" /></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="/">Something else here</a>
+            </li>
           </ul>
         </li>
 
@@ -128,4 +126,4 @@
       </div>
     </div>
   </nav>
-</div>
+</div> -->

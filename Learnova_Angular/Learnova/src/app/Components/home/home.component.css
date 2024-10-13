@@ -6,3 +6,40 @@
 .img-container {
   position: relative;
 }
+.carousel-item {
+  padding: 15px;
+}
+
+.card {
+  border: none;
+  background-color: #1e1e1e; /* Matches the dark background in your image */
+  color: white;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Change the color for your control icons */
+  border-radius: 50%;
+}
+
+.carousel-inner {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
