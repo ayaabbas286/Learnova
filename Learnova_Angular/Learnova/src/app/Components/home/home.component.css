@@ -1,45 +1,76 @@
-.sub-btn {
+/* .sub-btn {
   position: absolute;
   top: 480px;
   right: 680px;
 }
 .img-container {
   position: relative;
+} */
+.container {
+  height: 100vh;
 }
+.slider-topseller {
+  margin-top: 100px;
+}
+
+.carousel-control-next {
+  margin-right: -100px;
+}
+.carousel-control-prev {
+  background-color: #1e1e1e;
+  margin-left: -15px;
+  margin-top: 18px;
+  height: 250px;
+  border-radius: 15px;
+  width: 30px;
+}
+.carousel-control-prev-icon {
+  color: #1e1e1e;
+}
+
 .carousel-item {
   padding: 15px;
 }
 
 .card {
   border: none;
-  background-color: #1e1e1e; /* Matches the dark background in your image */
+  background-color: #1e1e1e;
   color: white;
 }
 
 .card-img-top {
-  height: 200px;
+  height: 150px;
   object-fit: cover;
 }
 
 .card-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: black; /* Change the color for your control icons */
+  background-color: black;
   border-radius: 50%;
 }
 
-.carousel-inner {
-  display: flex;
-  flex-direction: row;
+@media (max-width: 768px) {
+  .col-md-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
-@media (max-width: 768px) {
-  .col-md-3 {
-    flex: 0 0 100%;
-    max-width: 100%;
+@media (min-width: 768px) and (max-width: 1200px) {
+  .col-md-2 {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-md-2 {
+    flex: 0 0 19%;
+    max-width: 19%;
   }
 }
