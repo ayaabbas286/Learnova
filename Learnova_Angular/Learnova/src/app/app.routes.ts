@@ -11,23 +11,28 @@ import { ArLanguageComponent } from './Components/ar-language/ar-language.compon
 import { CartComponent } from './Components/cart/cart.component';
 import { ContactUSComponent } from './Components/payment/contact-us.component';
 import { BackupComponent } from './Components/backup/backup.component';
+import { CodingComponent } from './Components/courses/coding/coding.component';
+import { UxUiComponent } from './Components/courses/ux-ui/ux-ui.component';
+import { NetworkComponent } from './Components/courses/network/network.component';
 
 export const routes: Routes = [
-  {path: '', component:HomeComponent},
-  {path: 'courses', component:CoursesComponent},
-  {path: 'about-us', component:AboutUsComponent},
-  {path: 'instructors', component:InstructorsComponent},
-  {path: 'login', component:LoginComponent},
-  {path: 'notifications', component:NotificationsComponent},
-  {path: 'contact-us', component:ContactUSComponent},
-  {path: 'back-up', component:BackupComponent},
+  { path: '', component: HomeComponent },
+  { path: 'courses', component: CoursesComponent },
+  { path: 'about-us', component: AboutUsComponent },
+  { path: 'instructors', component: InstructorsComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'notifications', component: NotificationsComponent },
+  { path: 'contact-us', component: ContactUSComponent },
+  { path: 'back-up', component: BackupComponent },
+  { path: 'Coding', component: CodingComponent },
+  { path: 'UxUi', component: UxUiComponent },
+  { path: 'Network', component: NetworkComponent },
 
+  { path: 'cart', component: CartComponent },
 
-  {path: 'cart', component:CartComponent},
+  { path: 'ar', component: ArLanguageComponent },
 
-  {path: 'ar', component:ArLanguageComponent},
+  { path: 'register', component: RegisterComponent },
 
-  {path: 'register', component:RegisterComponent},
-
-  {path: '**', component:ErrorComponent},
+  { path: '**', component: ErrorComponent },
 ];
