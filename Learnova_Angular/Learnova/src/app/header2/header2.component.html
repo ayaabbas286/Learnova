@@ -46,9 +46,11 @@
             Courses
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/Coding">Coding</a></li>
-            <li><a class="dropdown-item" href="/UxUi">Design</a></li>
-            <li><a class="dropdown-item" href="/Network">It & Network</a></li>
+            <li><a class="dropdown-item" routerLink="/Coding">Coding</a></li>
+            <li><a class="dropdown-item" routerLink="/UxUi">Design</a></li>
+            <li>
+              <a class="dropdown-item" routerLink="/Network">It & Network</a>
+            </li>
           </ul>
         </li>
 
@@ -72,8 +74,14 @@
           >
         </li>
       </ul>
-      <form class="search-container form-inline d-flex me-3 justify-content-center " style="width: 35%; ">
-        <div class="input-group d-flex justify-content-center  "style="width: 60%; ">
+      <form
+        class="search-container form-inline d-flex me-3 justify-content-center"
+        style="width: 35%"
+      >
+        <div
+          class="input-group d-flex justify-content-center"
+          style="width: 60%"
+        >
           <input
             type="text"
             placeholder="search ..."

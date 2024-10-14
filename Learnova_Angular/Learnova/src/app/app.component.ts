@@ -1,15 +1,40 @@
-import { Component } from '@angular/core';
-import {  RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
+import { Header2Component } from './header2/header2.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink ,FooterComponent,HomeComponent,RouterModule],
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    FooterComponent,
+    HomeComponent,
+    RouterModule,
+    Header2Component,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'Learnova';
+  @ViewChild('navbarDropdown') navbarDropdown!: ElementRef;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(() => {
+      this.closeDropdown();
+    });
+  }
+
+  closeDropdown() {
+    if (this.navbarDropdown) {
+      const dropdownMenu =
+        this.navbarDropdown.nativeElement.querySelector('.dropdown-menu');
+      if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+        dropdownMenu.classList.remove('show');
+      }
+    }
+  }
 }

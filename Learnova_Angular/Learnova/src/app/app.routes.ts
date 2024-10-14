@@ -14,9 +14,11 @@ import { BackupComponent } from './Components/backup/backup.component';
 import { CodingComponent } from './Components/courses/coding/coding.component';
 import { UxUiComponent } from './Components/courses/ux-ui/ux-ui.component';
 import { NetworkComponent } from './Components/courses/network/network.component';
+import { SecpaymentComponent } from './Components/secpayment/secpayment.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'Secpayment', component: SecpaymentComponent },
   { path: 'courses', component: CoursesComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'instructors', component: InstructorsComponent },
@@ -33,6 +35,5 @@ export const routes: Routes = [
   { path: 'ar', component: ArLanguageComponent },
 
   { path: 'register', component: RegisterComponent },
-
   { path: '**', component: ErrorComponent },
 ];
