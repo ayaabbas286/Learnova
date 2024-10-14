@@ -18,7 +18,7 @@ import { SecpaymentComponent } from './Components/secpayment/secpayment.componen
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'Secpayment', component: SecpaymentComponent },
+  // { path: 'Secpayment', component: SecpaymentComponent },
   { path: 'courses', component: CoursesComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'instructors', component: InstructorsComponent },
