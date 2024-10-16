@@ -16,17 +16,20 @@ export class CartService {
   private cartItems: Course[] = [];
   private totalPrice = new BehaviorSubject<number>(0);
   totalPrice$ = this.totalPrice.asObservable();
+  cartItems$ = new BehaviorSubject<Course[]>(this.cartItems); // Observable for cart items
 
   // Method to add a course to the cart
   addToCart(course: Course) {
     this.cartItems.push(course);
     this.updateTotalPrice();
+    this.cartItems$.next(this.cartItems); // Emit the updated cart items
   }
 
   // Method to remove a course from the cart
   removeFromCart(courseId: number) {
     this.cartItems = this.cartItems.filter(course => course.id !== courseId);
     this.updateTotalPrice();
+    this.cartItems$.next(this.cartItems); // Emit the updated cart items
   }
 
   // Get all cart items
@@ -56,22 +59,22 @@ export class CartComponent implements OnInit {
 
   // Lifecycle hook: Called once after the component is initialized
   ngOnInit() {
-    this.loadCartItems();
+    // Subscribe to cart items
+    this.cartService.cartItems$.subscribe(courses => {
+      this.cartCourses = courses;
+      this.checkCartEmpty(); // Check if cart is empty
+    });
+
+    // Subscribe to total price
     this.cartService.totalPrice$.subscribe(price => {
       this.totalPrice = price;
     });
   }
 
-  // Load cart items from the service
-  loadCartItems() {
-    this.cartCourses = this.cartService.getCartItems();
-    this.checkCartEmpty();
-  }
-
   // Remove a course from the cart
   removeCourse(courseId: number) {
     this.cartService.removeFromCart(courseId);
-    this.loadCartItems(); // Refresh the cart items after removal
+    // No need to call loadCartItems() as cartItems$ already updates the cartCourses
   }
 
   // Check if the cart is empty
@@ -79,3 +82,4 @@ export class CartComponent implements OnInit {
     this.isCartEmpty = this.cartCourses.length === 0;
   }
 }
+
