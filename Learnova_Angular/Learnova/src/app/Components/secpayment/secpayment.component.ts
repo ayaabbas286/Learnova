@@ -3,7 +3,7 @@ import { NgClass } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
-import * as bootstrap from 'bootstrap';
+import bootstrap from 'bootstrap';
 import { FormsModule, NgForm } from '@angular/forms';
 
 
