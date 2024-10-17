@@ -16,6 +16,7 @@ export class CodingComponent {
   // coding.component.ts
   codingCourses = Courses.filter((Courses) => Courses.typ.startsWith('coding'));
   constructor(private cartService: CartService) {}
+  // cart ser
 
   @Input() courses: Course[] = [];
 
