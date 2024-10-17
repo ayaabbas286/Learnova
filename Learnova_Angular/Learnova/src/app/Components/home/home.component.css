@@ -1,20 +1,31 @@
-
-.container {
-  height: 100vh;
-
-/* }
-.slider-topseller {
-  margin-top: 100px;
+.main-content {
+  background-color: black;
 }
+.container {
+  height: 400vh;
+  background-color: black;
+}
+.slider-topseller {
+  margin-top: 10px;
+}
+.popular-heading {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  border-bottom: 1px solid white;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5), -1px -1px 3px rgba(0, 0, 0, 0.893);
 
+  font-weight: 500;
+}
 .carousel-control-next {
   margin-right: -15px;
   margin-top: 18px;
   height: 250px;
   border-radius: 15px;
   width: 30px;
-    background-color: #1e1e1e;
-
+  background-color: #1e1e1e;
 }
 .carousel-control-prev {
   background-color: #1e1e1e;
@@ -73,5 +84,4 @@
     flex: 0 0 19%;
     max-width: 19%;
   }
-} */
 }
