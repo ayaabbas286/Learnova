@@ -16,7 +16,7 @@
       <p class="card-text">The trainer: {{ course.instructor }}</p>
       <p>price: {{ course.price }} EGP</p>
       <div>
-        <a href="#" class="btn btn-danger">add to cart</a>
+        <button class="btn btn-danger" (click)="addToCart(course)">add to cart</button>
         <a routerLink="/back-up" class="btn btn-danger">buy now</a>
       </div>
     </div>

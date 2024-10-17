@@ -1,6 +1,6 @@
-
 export interface Course {
-  typ:string;
+  id: number;
+  typ: string;
   title: string;
   image: string;
   instructor: string;
