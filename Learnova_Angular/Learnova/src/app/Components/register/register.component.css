@@ -1,0 +1,42 @@
+/* تغيير لون الخلفية */
+.container {
+  background-color: black;
+}
+
+/* لون البرتقالي للـ label */
+.custom-label {
+  color: orange;
+}
+
+/* shadow box أزرق عند التركيز */
+.custom-input:focus {
+  box-shadow: 0 0 10px 2px blue;
+  border-color: blue;
+}
+
+/* جعل النص في النموذج الأبيض */
+.card-body,
+.card-title {
+  color: white;
+}
+
+/* تخصيص خلفية الكارد */
+.card {
+  background-color: #000000;
+}
+
+/* تخصيص زر التسجيل */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+/* الصوره */
+
+img {
+  height: 700px;
+}
+.form-card {
+                    
+  margin-left:px; /* Adjust this value to increase space between the form and the image */
+}

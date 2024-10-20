@@ -1,1 +1,191 @@
-<p>register works!</p>
+<div class="container-fluid mt-5">
+  <div class="row">
+    <!-- Form on the left -->
+    <div class="col-lg-6 form-card col-md-6 col-sm-6 mb-3">
+      <div class="card  h-100 card-space">
+        <div class="card-body">
+          <h3 class="card-title text-white">Sign Up</h3>
+          <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+            <!-- Role Selection -->
+            <div class="mb-3">
+              <label for="role" class="form-label custom-label">You are:</label>
+              <select
+                class="form-select custom-input"
+                [(ngModel)]="selectedRole"
+                name="role"
+                id="role"
+                (change)="onRoleChange()"
+                required
+              >
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+              </select>
+            </div>
+
+            <div class="row">
+              <!-- First Name -->
+              <div class="col-md-6 mb-3">
+                <label for="firstName" class="form-label custom-label"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control custom-input"
+                  id="firstName"
+                  [(ngModel)]="firstName"
+                  name="firstName"
+                  placeholder="Enter first name"
+                  required
+                  minlength="2"
+                />
+              </div>
+
+              <!-- Last Name -->
+              <div class="col-md-6 mb-3">
+                <label for="lastName" class="form-label custom-label"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  class="form-control custom-input"
+                  id="lastName"
+                  [(ngModel)]="lastName"
+                  name="lastName"
+                  placeholder="Enter last name"
+                  required
+                  minlength="2"
+                />
+              </div>
+
+              <!-- Phone -->
+              <div class="col-md-6 mb-3">
+                <label for="phone" class="form-label custom-label">Phone</label>
+                <input
+                  type="tel"
+                  class="form-control custom-input"
+                  id="phone"
+                  [(ngModel)]="phone"
+                  name="phone"
+                  placeholder="Enter phone number"
+                  required
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label custom-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control custom-input"
+                  id="email"
+                  [(ngModel)]="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+
+              <!-- Password -->
+              <div class="col-md-6 mb-3">
+                <label for="password" class="form-label custom-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control custom-input"
+                  id="password"
+                  [(ngModel)]="password"
+                  name="password"
+                  placeholder="Enter password"
+                  required
+                  minlength="6"
+                />
+              </div>
+
+              <!-- Extra fields for Teacher -->
+              <div *ngIf="selectedRole === 'teacher'" class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="specialization" class="form-label custom-label"
+                    >Specialization</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control custom-input"
+                    id="specialization"
+                    [(ngModel)]="specialization"
+                    name="specialization"
+                    placeholder="Enter your specialization"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="experience" class="form-label custom-label"
+                    >Experience (Years)</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control custom-input"
+                    id="experience"
+                    [(ngModel)]="experience"
+                    name="experience"
+                    placeholder="Enter years of experience"
+                    required
+                    min="0"
+                  />
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="nationalId" class="form-label custom-label"
+                    >National ID</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control custom-input"
+                    id="nationalId"
+                    [(ngModel)]="nationalId"
+                    name="nationalId"
+                    placeholder="Enter national ID"
+                    required
+                  />
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <label for="additionalInfo" class="form-label custom-label"
+                    >Enter Your Country
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control custom-input"
+                    id="Country"
+                    [(ngModel)]="Country"
+                    name="additionalInfo"
+                    placeholder="Enter Your Country"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="btn btn-primary w-100"
+              [disabled]="signupForm.invalid"
+            >
+              Sign Up
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image on the right -->
+    <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+      <div class="card h-100 card-space">
+        <div class="card-body d-flex justify-content-center align-items-center">
+          <img [src]="selectedImage" alt="Role Image" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
