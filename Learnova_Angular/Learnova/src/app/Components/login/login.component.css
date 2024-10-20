@@ -1,0 +1,88 @@
+/* جعل خلفية الصفحة سوداء */
+.login-container {
+  background-image: url(https://tecuniv25.wordpress.com/wp-content/uploads/2019/02/cropped-1420938829-amazing-libraries-27-880.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%; 
+  width: 100%; 
+  /* max-width: 1200px; */
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+}
+
+.d-form {
+  display: flex;
+
+  width: 700px;
+  height: 90vh;
+}
+/* توسيع النموذج ليكون أكبر */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 8px;
+  width: 100%;
+  height: 350px;
+}
+.form-group {
+  width: 100%;
+  justify-content: center;
+}
+
+/* تصميم الحقول مع ظل أزرق */
+.input-shadow {
+  box-shadow: 0 0 10px 0 rgba(0, 123, 255, 0.7); /* ظل أزرق */
+  color: black; /* لضمان أن النص داخل الحقول مرئي */
+}
+
+/* تكبير حجم الحقول */
+input {
+  color: black;
+  padding: 15px; /* تكبير الحقول */
+  border-radius: 4px;
+  font-size: 1.1rem; /* تكبير حجم الخط */
+}
+
+/* تغيير لون العناوين إلى البرتقالي */
+label {
+  color: #ffa500; /* لون برتقالي */
+  font-size: 1.2rem; /* تكبير الخط */
+}
+
+/* تصميم الأزرار لتكون عريضة مع استجابة أفضل */
+button {
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1.2rem; /* تكبير النص في الزر */
+}
+
+/* تحسين التصميم على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px;
+  }
+
+  form {
+    padding: 20px;
+    width: 100%; /* توسيع النموذج */
+  }
+
+  label {
+    font-size: 1rem; /* تصغير حجم العنوان قليلاً على الشاشات الصغيرة */
+  }
+
+  input {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+}
