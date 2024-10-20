@@ -9,7 +9,7 @@
   font-size: 2.5rem;
   color: white;
   text-transform: uppercase;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid rgb(255, 60, 0);
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -20,24 +20,22 @@
 }
 
 .highlight {
-  color: red;
+  color: rgb(255, 60, 0);
   font-weight: bold;
 }
 
 .btn-danger {
-  background-color: red;
+  background-color: rgb(255, 60, 0);
   border: none;
   padding: 10px 20px;
 }
 
 .btn-danger:hover {
-  background-color: darkred;
+  background-color: rgb(255, 60, 0);
 }
 /**red line*/
 .red-line {
   border: none;
   height: 2px;
-  background-color: red;
+  background-color: rgb(255, 60, 0);
 }
-
-

@@ -2,7 +2,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
-import { Header2Component } from './header2/header2.component';
+import { Header2Component } from './Components/header2/header2.component';
 
 @Component({
   selector: 'app-root',
