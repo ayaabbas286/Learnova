@@ -1,40 +1,57 @@
 <div class="container-fluid mt-5">
-  <div class="row">
-    <!-- Form on the left -->
-    <div class="col-lg-6 form-card col-md-6 col-sm-6 mb-3">
-      <div class="card  h-100 card-space">
+  <div class="row rol-row order-4">
+    <!-- First Card: Role Selection -->
+    <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
+      <div class="card card-rol h-100">
         <div class="card-body">
-          <h3 class="card-title text-white">Sign Up</h3>
-          <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
-            <!-- Role Selection -->
-            <div class="mb-3">
-              <label for="role" class="form-label custom-label">You are:</label>
-              <select
-                class="form-select custom-input"
-                [(ngModel)]="selectedRole"
-                name="role"
-                id="role"
-                (change)="onRoleChange()"
-                required
-              >
-                <option value="student">Student</option>
-                <option value="teacher">Teacher</option>
-              </select>
-            </div>
+          <h3 class="card-title">You Are?</h3>
+          <div class="d-flex justify-content-around">
+            <!-- Teacher Button -->
+            <button
+              class="btn"
+              [ngClass]="{
+                'btn-primary': selectedRole === 'teacher',
+                'btn-secondary': selectedRole !== 'teacher'
+              }"
+              (click)="selectRole('teacher')"
+            >
+              Teacher
+            </button>
 
+            <!-- Student Button -->
+            <button
+              class="btn"
+              [ngClass]="{
+                'btn-primary': selectedRole === 'student',
+                'btn-secondary': selectedRole !== 'student'
+              }"
+              (click)="selectRole('student')"
+            >
+              Student
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Card: Form -->
+  <div class="row form-row">
+    <div class="col-lg-6 col-md-6 col-sm-6 mb-3 w-100">
+      <div class="card card-form">
+        <div class="card-body">
+          <h3 class="card-title">Sign Up</h3>
+          <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
             <div class="row">
               <!-- First Name -->
               <div class="col-md-6 mb-3">
-                <label for="firstName" class="form-label custom-label"
-                  >First Name</label
-                >
+                <label for="firstName" class="form-label">First Name</label>
                 <input
                   type="text"
-                  class="form-control custom-input"
+                  class="form-control"
                   id="firstName"
                   [(ngModel)]="firstName"
                   name="firstName"
-                  placeholder="Enter first name"
                   required
                   minlength="2"
                 />
@@ -42,148 +59,188 @@
 
               <!-- Last Name -->
               <div class="col-md-6 mb-3">
-                <label for="lastName" class="form-label custom-label"
-                  >Last Name</label
-                >
+                <label for="lastName" class="form-label">Last Name</label>
                 <input
                   type="text"
-                  class="form-control custom-input"
+                  class="form-control"
                   id="lastName"
                   [(ngModel)]="lastName"
                   name="lastName"
-                  placeholder="Enter last name"
                   required
                   minlength="2"
                 />
               </div>
+            </div>
 
+            <div class="row">
               <!-- Phone -->
               <div class="col-md-6 mb-3">
-                <label for="phone" class="form-label custom-label">Phone</label>
+                <label for="phone" class="form-label">Phone</label>
                 <input
                   type="tel"
-                  class="form-control custom-input"
+                  class="form-control"
                   id="phone"
                   [(ngModel)]="phone"
                   name="phone"
-                  placeholder="Enter phone number"
                   required
                 />
               </div>
 
               <!-- Email -->
               <div class="col-md-6 mb-3">
-                <label for="email" class="form-label custom-label">Email</label>
+                <label for="email" class="form-label">Email</label>
                 <input
                   type="email"
-                  class="form-control custom-input"
+                  class="form-control"
                   id="email"
                   [(ngModel)]="email"
                   name="email"
-                  placeholder="Enter your email"
                   required
                 />
               </div>
 
-              <!-- Password -->
+              <!-- Confirm Email -->
               <div class="col-md-6 mb-3">
-                <label for="password" class="form-label custom-label"
-                  >Password</label
+                <label for="confirmEmail" class="form-label"
+                  >Confirm Email</label
                 >
                 <input
+                  type="email"
+                  class="form-control"
+                  id="confirmEmail"
+                  [(ngModel)]="confirmEmail"
+                  name="confirmEmail"
+                  required
+                  [pattern]="email"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Password -->
+              <div class="col-md-6 mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
                   type="password"
-                  class="form-control custom-input"
+                  class="form-control"
                   id="password"
                   [(ngModel)]="password"
                   name="password"
-                  placeholder="Enter password"
                   required
                   minlength="6"
                 />
               </div>
 
-              <!-- Extra fields for Teacher -->
-              <div *ngIf="selectedRole === 'teacher'" class="row">
+              <!-- Confirm Password -->
+              <div class="col-md-6 mb-3">
+                <label for="confirmPassword" class="form-label"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmPassword"
+                  [(ngModel)]="confirmPassword"
+                  name="confirmPassword"
+                  required
+                  [pattern]="password"
+                />
+              </div>
+            </div>
+
+            <!-- Teacher-Specific Fields -->
+            <div *ngIf="selectedRole === 'teacher'">
+              <div class="row">
+                <!-- Specialization -->
                 <div class="col-md-6 mb-3">
-                  <label for="specialization" class="form-label custom-label"
+                  <label for="specialization" class="form-label"
                     >Specialization</label
                   >
                   <input
                     type="text"
-                    class="form-control custom-input"
+                    class="form-control"
                     id="specialization"
                     [(ngModel)]="specialization"
                     name="specialization"
-                    placeholder="Enter your specialization"
                     required
                   />
                 </div>
 
+                <!-- Experience -->
                 <div class="col-md-6 mb-3">
-                  <label for="experience" class="form-label custom-label"
+                  <label for="experience" class="form-label"
                     >Experience (Years)</label
                   >
                   <input
                     type="number"
-                    class="form-control custom-input"
+                    class="form-control"
                     id="experience"
                     [(ngModel)]="experience"
                     name="experience"
-                    placeholder="Enter years of experience"
                     required
                     min="0"
                   />
                 </div>
+              </div>
 
+              <div class="row">
+                <!-- National ID -->
                 <div class="col-md-6 mb-3">
-                  <label for="nationalId" class="form-label custom-label"
-                    >National ID</label
-                  >
+                  <label for="nationalId" class="form-label">National ID</label>
                   <input
                     type="text"
-                    class="form-control custom-input"
+                    class="form-control"
                     id="nationalId"
                     [(ngModel)]="nationalId"
                     name="nationalId"
-                    placeholder="Enter national ID"
                     required
                   />
                 </div>
 
+                <!-- Country -->
                 <div class="col-md-6 mb-3">
-                  <label for="additionalInfo" class="form-label custom-label"
-                    >Enter Your Country
-                  </label>
+                  <label for="country" class="form-label">Country</label>
                   <input
                     type="text"
-                    class="form-control custom-input"
-                    id="Country"
-                    [(ngModel)]="Country"
-                    name="additionalInfo"
-                    placeholder="Enter Your Country"
+                    class="form-control"
+                    id="country"
+                    [(ngModel)]="country"
+                    name="country"
                   />
                 </div>
               </div>
+            </div>
+
+            <!-- Agree to Privacy Policy Checkbox -->
+            <div class="form-check mb-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="privacyPolicy"
+                [(ngModel)]="agreeToPolicy"
+                name="privacyPolicy"
+                required
+              />
+              <label class="form-check-label" for="privacyPolicy">
+                I agree to the <a href="#">Privacy Policy</a>
+              </label>
             </div>
 
             <!-- Submit Button -->
             <button
               type="submit"
               class="btn btn-primary w-100"
-              [disabled]="signupForm.invalid"
+              [disabled]="signupForm.invalid || !agreeToPolicy"
             >
               Sign Up
             </button>
-          </form>
-        </div>
-      </div>
-    </div>
 
-    <!-- Image on the right -->
-    <div class="col-lg-6 col-md-6 col-sm-6 mb-3">
-      <div class="card h-100 card-space">
-        <div class="card-body d-flex justify-content-center align-items-center">
-          <img [src]="selectedImage" alt="Role Image" class="img-fluid" />
+            <!-- Already have an account? -->
+            <div class="mt-3 text-center">
+              <span>Do you have an account?</span>
+              <a href="/login" class="text-primary">Log In</a>
+            </div>
+          </form>
         </div>
       </div>
     </div>

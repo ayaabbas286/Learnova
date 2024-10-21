@@ -10,33 +10,47 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './register.component.css',
 })
 export class RegisterComponent {
-  selectedRole: string = 'student'; // Default role
+  selectedRole: string = 'student';
   firstName: string = '';
   lastName: string = '';
   phone: string = '';
   email: string = '';
   password: string = '';
-
-  // For teachers
   specialization: string = '';
-  experience: number | null = null;
+  experience: number = 0;
   nationalId: string = '';
+  country: string = '';
+  confirmEmail: any;
+  confirmPassword: any;
+  agreeToPolicy: any;
 
-  // Images for roles
-  studentImage: string = 'Images/Reg_Photo/stu.png'; // Replace with actual path
-  teacherImage: string = 'Images/Reg_Photo/tech.png'; // Replace with actual path
-
-  selectedImage: string = this.studentImage;
-  Country: string | undefined;
-
-  // Change image based on selected role
-  onRoleChange() {
-    this.selectedImage =
-      this.selectedRole === 'teacher' ? this.teacherImage : this.studentImage;
+  selectRole(role: string) {
+    this.selectedRole = role;
   }
 
-  // Handle form submission and store data in localStorage
   onSubmit() {
+    // Regular expression to check valid email domains
+    const emailPattern =
+      /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|hotmail\.com|outlook\.com)$/;
+
+    // Check if emails match and if the email ends with allowed domains
+    if (this.email !== this.confirmEmail) {
+      alert('Email and Confirm Email do not match!');
+      return;
+    }
+
+    if (!emailPattern.test(this.email)) {
+      alert(
+        'Email must be from gmail.com, yahoo.com, hotmail.com, or outlook.com'
+      );
+      return;
+    }
+
+    if (this.password !== this.confirmPassword) {
+      alert('Password and Confirm Password do not match!');
+      return;
+    }
+
     const userData = {
       role: this.selectedRole,
       firstName: this.firstName,
@@ -44,14 +58,17 @@ export class RegisterComponent {
       phone: this.phone,
       email: this.email,
       password: this.password,
-      specialization: this.specialization,
-      experience: this.experience,
-      nationalId: this.nationalId,
-      Country: this.Country,
+      specialization:
+        this.selectedRole === 'teacher' ? this.specialization : '',
+      experience: this.selectedRole === 'teacher' ? this.experience : '',
+      nationalId: this.selectedRole === 'teacher' ? this.nationalId : '',
+      country: this.selectedRole === 'teacher' ? this.country : '',
+      agreeToPolicy: this.agreeToPolicy,
     };
 
-    // Store data in localStorage
+    // Save data to localStorage
     localStorage.setItem('userData', JSON.stringify(userData));
-    alert('Data saved successfully!');
+
+    alert('Registration successful! Your data has been saved.');
   }
 }
