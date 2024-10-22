@@ -17,7 +17,27 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
-
+ <button type="submit" class="btn search-btn-sm">
+            <i class="fas fa-search"></i>
+          </button>
+          <button type="submit" class=" btn bell-btn-sm">
+            <a
+            class="nav-link active notify-btn"
+            routerLinkActive="active"
+            aria-current="page"
+            routerLink="/notifications"
+            ><i class="fa-solid fa-bell"></i
+          ></a>
+          </button>
+          <li class="nav-item bell-btn-sm">
+            <a
+              class="nav-link active notify-btn"
+              routerLinkActive="active"
+              aria-current="page"
+              routerLink="/notifications"
+              ><i class="fa-solid fa-bell"></i
+            ></a>
+          </li>
     <div
       class="collapse navbar-collapse justify-content-between"
       id="navbarSupportedContent"
@@ -44,7 +64,7 @@
           >
             Courses
           </a>
-          <ul class="dropdown-menu">
+          <ul routerLinkActive="active" class="dropdown-menu">
             <li><a class="dropdown-item" routerLink="/Coding">Coding</a></li>
             <li><a class="dropdown-item" routerLink="/UxUi">Design</a></li>
             <li>
@@ -67,11 +87,6 @@
             >About Us</a
           >
         </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" routerLink="/cart"
-            >Cart</a
-          >
-        </li>
       </ul>
       <form
         class="search-container form-inline d-flex me-3 justify-content-center"
@@ -85,11 +100,11 @@
             type="text"
             placeholder="search ..."
             aria-label="Search"
-            class="form-control bg-dark"
-            style="height: 50px"
+            class="form-control searchbar"
+            style="height: 37px"
           />
 
-          <button type="submit" class="btn ">
+          <button type="submit" class="btn search-btn">
             <i class="fas fa-search"></i>
           </button>
         </div>
@@ -101,7 +116,7 @@
 
           <li class="nav-item">
             <a
-              class="nav-link active btn"
+              class="nav-link "
               routerLinkActive="active"
               aria-current="page"
               routerLink="/login"
@@ -110,7 +125,7 @@
           </li>
           <li class="nav-item">
             <a
-              class="nav-link active btn"
+              class="nav-link  "
               routerLinkActive="active"
               aria-current="page"
               routerLink="/register"
