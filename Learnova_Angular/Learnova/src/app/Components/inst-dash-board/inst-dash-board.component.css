@@ -1,0 +1,34 @@
+/* الشريط الجانبي يكون مخفيًا بشكل افتراضي */
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -250px; /* الشريط الجانبي مخفي */
+  transition: margin 0.25s ease-out;
+  width: 250px;
+}
+
+/* عندما يكون .toggled مضافًا، يتم إظهار الشريط الجانبي */
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0; /* الشريط الجانبي ظاهر */
+}
+
+/* محتوى الصفحة */
+#page-content-wrapper {
+  width: 100%;
+  padding: 20px;
+}
+h2 {
+  color: rgb(255, 111, 0);
+  margin-bottom: 50px;
+}
+.instname {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+/* عندما تكون الشاشة كبيرة (أكبر من 768px)، الشريط الجانبي يكون ظاهر دائمًا */
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+}
