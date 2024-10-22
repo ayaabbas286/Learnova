@@ -82,7 +82,7 @@ a {
 .search-btn-sm {
   display: none;
 }
-.bell-btn-sm{
+.bell-btn-sm {
   display: none;
 }
 @media (max-width: 932px) {
@@ -132,10 +132,10 @@ a {
     margin-left: 1px;
     margin-top: -35px;
   }
-  .notify-btn{
+  .notify-btn {
     display: none;
   }
-  .bell-btn-sm{
+  .bell-btn-sm {
     display: flex;
     color: #ffff;
     color: rgb(255, 111, 0);
@@ -189,5 +189,4 @@ a {
   .search-btn {
     display: none;
   }
-
 }
