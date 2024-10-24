@@ -104,8 +104,7 @@
 }
 .card-rol {
   width: 450px;
-  box-shadow: -19px 20px 20px 2px rgb(255, 111, 0,47%);
-
+  box-shadow: -19px 20px 20px 2px rgb(255, 111, 0, 47%);
 }
 .form-row {
   /* border: 1px solid white; */
@@ -116,7 +115,7 @@
   margin-right: 90px;
 }
 .card-form {
-  box-shadow: -19px 20px 20px 2px rgb(255, 111, 0,47%);
+  box-shadow: -19px 20px 20px 2px rgb(255, 111, 0, 47%);
 }
 /* Media Queries */
 @media (max-width: 768px) {
@@ -149,9 +148,22 @@
   .form-control {
     font-size: 1rem; /* حجم النص في الحقول */
   }
+  .card-rol {
+    justify-items: center;
+    width: 450px;
+    box-shadow: -19px 20px 20px 2px rgb(255, 111, 0, 47%);
+  }
+  .rol-row {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 550px;
+    margin-right: 50px;
+    /* border: 1px solid red; */
+  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 600px) {
   .card-title {
     font-size: 1rem; /* تقليل حجم النص أكثر للأجهزة الصغيرة */
   }
@@ -162,5 +174,21 @@
 
   .form-label {
     font-size: 0.9rem; /* حجم النص في التسميات */
+  }
+  .card-rol {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    box-shadow: -19px 20px 20px 2px rgb(255, 111, 0, 47%);
+    height: auto;
+  }
+  .rol-row {
+    flex-direction: colum;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width:400px;
+    margin-right: 50px;
+    border: 1px solid red;
   }
 }
