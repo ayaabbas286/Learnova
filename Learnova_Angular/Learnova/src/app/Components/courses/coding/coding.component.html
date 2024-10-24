@@ -1,23 +1,32 @@
-<div class="grid-container">
-  <div
-    *ngFor="let course of codingCourses"
-    class="card"
-    style="width: 18rem"
-    mb-6
-  >
-    <img
-      [src]="course.image"
-      alt="{{ course.title }}"
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <h5 class="card-title">{{ course.title }}</h5>
-      <p class="card-text">The trainer: {{ course.instructor }}</p>
-      <p>price: {{ course.price }} EGP</p>
-      <div>
-        <button class="btn btn-danger" (click)="addToCart(course)">add to cart</button>
-        <a routerLink="/back-up" class="btn btn-danger">buy now</a>
+<div class="main">
+  <div class="container">
+    <div class="text-left heading">
+      <p>Programming Courses</p>
+    </div>
+    <div class="row">
+      <div
+        *ngFor="let course of codingCourses"
+        class="card"
+        style="width: 18rem"
+        mb-2
+      >
+        <img
+          [src]="course.image"
+          alt="{{ course.title }}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ course.title }}</h5>
+          <p class="card-text">The trainer: {{ course.instructor }}</p>
+          <p>price: {{ course.price }} EGP</p>
+          <div>
+            <button class="btn btn-danger" (click)="addToCart(course)">
+              add to cart
+            </button>
+            <a routerLink="/back-up" class="btn btn-danger">buy now</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
