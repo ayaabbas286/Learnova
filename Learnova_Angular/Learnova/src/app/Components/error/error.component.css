@@ -1,43 +1,19 @@
-.about-us-container {
-  background-color: black;
-  color: white;
-  min-height: 100vh;
-  padding: 50px 0;
+ .main{
+  display: flex;
+justify-content: center;
+align-items: center;
+background-color: black;
+  color: #ffff;
+  height: 100vh;
+  text-align: center;
 }
-
-.title {
-  font-size: 2.5rem;
-  color: white;
-  text-transform: uppercase;
-  border-bottom: 2px solid red;
-  display: inline-block;
-  padding-bottom: 5px;
+.error-msg{
+text-align: center;
+  font-size: 80px ;
+  font-weight: 700;
 }
-
-.lead {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+.sm-text{
+  font-size: 30px;
+  color: #d1d1d14a;
+  margin-right: 60px;
 }
-
-.highlight {
-  color: red;
-  font-weight: bold;
-}
-
-.btn-danger {
-  background-color: red;
-  border: none;
-  padding: 10px 20px;
-}
-
-.btn-danger:hover {
-  background-color: darkred;
-}
-/**red line*/
-.red-line {
-  border: none;
-  height: 2px;
-  background-color: red;
-}
-
-
