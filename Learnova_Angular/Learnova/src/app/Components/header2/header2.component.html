@@ -103,17 +103,24 @@
             placeholder="search ..."
             aria-label="Search"
             class="form-control searchbar"
-            style="height: 37px"
+            style="height: 33px"
           />
 
           <button type="submit" class="btn search-btn">
             <i class="fas fa-search"></i>
           </button>
         </div>
+
       </form>
 
       <div class="login-signup-btn">
         <ul class="navbar-nav mr-auto">
+          <li class="nav-item cart-btn position-relative">
+            <a class="nav-link" routerLink="/cart">
+              <i class="bi bi-bag"></i>
+              <span class="cart-counter">0</span>
+            </a>
+          </li>
           <span class="seperator">|</span>
 
           <li class="nav-item">

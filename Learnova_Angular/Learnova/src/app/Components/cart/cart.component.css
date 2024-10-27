@@ -1,10 +1,19 @@
+.main{
+  margin-bottom: 50px;
+
+  background-color: #000000;
+}
 .container {
     font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #000000;
+    color: #ffffff;
     padding-top: 20px;
 }
+.fa-shopping-cart{
+  margin-top: 20px;
+  margin-bottom: 20px;
 
+}
 /* Cart Header */
 .page-header {
     text-align: center;
@@ -33,11 +42,11 @@
 }
 
 .cart-course img {
-    border-radius: 50%;
+    /* border-radius: 50%; */
     max-width: 100px;
     /* Ensure max size on all screens */
     width: 100%;
-    height: auto;
+    height: 100px;
 }
 
 /* Ensure the image takes up only the appropriate space on small screens */

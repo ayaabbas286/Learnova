@@ -1,6 +1,6 @@
 .header-container {
   background-color: rgb(27, 27, 27);
-  box-shadow: 0px 1px 10px rgba(165, 165, 165, 0.316);
+  box-shadow: 0px 1px 8px rgba(58, 58, 58, 0.316);
 }
 .navbar {
   background-color: rgb(24, 23, 23);
@@ -47,7 +47,7 @@ a {
 .seperator {
   margin-left: -10px;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-top: 6px;
   color: rgb(61, 61, 61);
 }
 .dropdown-menu {
@@ -60,11 +60,12 @@ a {
 }
 .searchbar {
   background-color: rgb(27, 27, 27);
-  border: 1px solid rgb(255, 111, 0);
+  border: 1px solid rgb(255, 255, 255);
   position: relative;
-  /* border-radius: 5px; */
+  border-radius: 5px !important;
   margin-right: -100px;
   margin-left: 100px;
+
 }
 .searchbar:focus {
   outline: none;
@@ -76,7 +77,7 @@ a {
   border: none;
   color: rgb(255, 111, 0);
   right: -100px;
-  top: 2px;
+  top: -1px;
   position: absolute;
 }
 .search-btn-sm {
@@ -84,6 +85,29 @@ a {
 }
 .bell-btn-sm {
   display: none;
+}
+.cart-btn {
+  margin-top: -5px;
+}
+.bi-bag {
+  margin-right: 20px;
+  font-size: 20px;
+
+}
+.cart-counter {
+  position: absolute;
+  top: 3px;
+  right: 14px;
+  background-color: rgba(27, 27, 27, 0);
+  color: rgb(255, 111, 0);
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.75rem; /* Controls counter font size */
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 932px) {
   .navbar-brand {
