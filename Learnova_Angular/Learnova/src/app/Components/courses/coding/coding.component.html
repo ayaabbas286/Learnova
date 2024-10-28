@@ -1,6 +1,6 @@
 <div class="main">
   <div class="container">
-    <div class="text-left heading">
+    <div class="text-center heading">
       <p>Programming Courses</p>
     </div>
     <div class="row">
@@ -21,10 +21,10 @@
           <p class="card-text">The trainer: {{ course.instructor }}</p>
           <p>price: {{ course.price }} EGP</p>
           <div>
-            <button class="btn btn-danger" (click)="addToCart(course)">
+            <button class="btn" (click)="addToCart(course)">
               add to cart
             </button>
-            <a routerLink="/back-up" class="btn btn-danger">buy now</a>
+            <a routerLink="/back-up" class="btn ">buy now</a>
           </div>
         </div>
       </div>
