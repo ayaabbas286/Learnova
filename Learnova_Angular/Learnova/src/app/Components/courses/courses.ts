@@ -136,7 +136,7 @@ export const Courses: courseModel.Course[] = [
   },
   {
     typ: 'network',
-    title: ' Packet Analysis and Ethical Hacking',
+    title: ' Packet Analysis, Ethical Hacking',
     image:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMsFDHoNdoj2v8BYH16MauidahE4Oj8LufuA&s',
     instructor: 'Zaid Sabih',
@@ -216,7 +216,7 @@ export const Courses: courseModel.Course[] = [
   },
   {
     typ: 'ux_ui',
-    title: ' Design Essentials Adobe XD UI/UX Design',
+    title: ' Design Essentials Adobe XD',
     image:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi9bgrRmde7xqy1CPIyulV-bLjhLAXUq17Ew&s',
     instructor: 'Daniel Walter Sco',

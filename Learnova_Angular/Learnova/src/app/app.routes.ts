@@ -15,6 +15,7 @@ import { NetworkComponent } from './Components/courses/network/network.component
 // import { SecpaymentComponent } from './Components/secpayment/secpayment.component';
 import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { InstDAshBoardComponent } from './Components/inst-dash-board/inst-dash-board.component';
+import { ContactComponent } from './Components/contact/contact.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,6 +33,7 @@ export const routes: Routes = [
   { path: 'cart', component: CartComponent },
 
   { path: 'ar', component: ArLanguageComponent },
+  { path: 'contact', component: ContactComponent },
 
   { path: 'register', component: RegisterComponent },
   { path: 'InstDAshBoard', component: InstDAshBoardComponent },

@@ -1,17 +1,48 @@
 
-/* إعداد تصميم البطاقات */
-.card {
+body {
   background-color: #000000;
-  border: 1px solid #ffffff;
+}
+.main {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+  margin-top: 50px;
+}
+.container {
+  background-color: #000000;
+}
+.card {
+  padding: 3px;
+  background-color: rgb(10, 10, 10);
+  border: 1px solid #545454;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: white;
-  margin-bottom: 30px;
+  /* margin-bottom: 20px; */
+  margin: 15px;
 }
+.card-img-top {
+  height: 100%;
+  width: 100%;
+  /* object-fit: cover; */
+}
+.card-body {
+  height: 160px;
+  background-color: rgb(26, 26, 26);
+}
+.heading {
+  font-size: 35px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  /* border: 1px solid white; */
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5),
+    -1px -1px 3px rgba(0, 0, 0, 0.893);
 
-img{
-  height: 150px;
+  font-weight: 500;
 }
 @media (max-height: 600px) {
   .card {
@@ -19,8 +50,8 @@ img{
   }
 }
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgb(255, 111, 0);
+  transform: scale(1.04);
+  box-shadow: 0 2px 10px rgba(76, 76, 76, 0.645);
 }
 .card-img {
   width: 100%;
@@ -28,7 +59,7 @@ img{
   object-fit: cover;
 }
 .card-title {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -38,21 +69,30 @@ img{
   margin-top: 10px;
 }
 .btn {
-  background-color: rgb(255, 111, 0);
+  background-color: rgb(26, 26, 26);
+  margin-top: -10px;
+  border: 1px solid rgb(136, 46, 1);
+  margin-right: 15px;
+  color: #ffffff;
+}
+.btn:hover {
+  background-color: rgb(235, 65, 8);
 
-  margin-right: 15px; /* مسافة بين الأزرار */
 }
 /* إعداد الشبكة */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* الأعمدة تتكيف مع حجم الشاشة */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* الأعمدة تتكيف مع حجم الشاشة */
   gap: 20px; /* مسافة بين البطاقات */
   padding: 20px; /* مسافة داخلية حول الشبكة */
   background-color: #000000;
-
 }
 @media (max-width: 600px) {
   .card {
     font-size: 14px; /* تصغير حجم النص على الشاشات الصغيرة */
   }
 }
+
