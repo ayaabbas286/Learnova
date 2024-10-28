@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { Courses } from '../courses'; 
+import { Component, Input } from '@angular/core';
+import { Courses } from '../courses';
+import { CartService } from '../../../cartser/cart.service';
+import { Course } from '../course.model';
 
 @Component({
   selector: 'app-ux-ui',
@@ -11,5 +13,13 @@ import { Courses } from '../courses';
 })
 export class UxUiComponent {
   ux_uiCourses = Courses.filter(course => course.typ.startsWith('ux_ui'));
+ // coding.component.ts
+ constructor(private cartService: CartService) {}
+ // cart ser
 
+ @Input() courses: Course[] = [];
+
+ addToCart(Course: Course) {
+   this.cartService.addToCart(Course);
+ }
 }

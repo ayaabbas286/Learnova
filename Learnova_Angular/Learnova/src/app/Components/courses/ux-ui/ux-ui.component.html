@@ -14,7 +14,7 @@
             <p class="card-text">The trainer: {{ course.instructor }}</p>
             <p>price: {{ course.price }} جنيه</p>
             <div>
-              <a href="#" class="btn btn-danger">add to cart</a>
+              <a class="btn" (click)="addToCart(course)">add to cart</a>
               <a href="#" class="btn btn-danger">buy now</a>
             </div>
           </div>
