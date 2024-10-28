@@ -1,26 +1,27 @@
 /* جعل خلفية الصفحة سوداء */
 .login-container {
-  background-image: url(https://tecuniv25.wordpress.com/wp-content/uploads/2019/02/cropped-1420938829-amazing-libraries-27-880.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%; 
-  width: 100%; 
+  background: black;
+  height: 900px;
+  width: 100%;
   /* max-width: 1200px; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .d-form {
+  /* border: 1PX solid ; */
   display: flex;
 
-  width: 700px;
-  height: 90vh;
+  width: 900px;
+  height: 500px;
 }
 /* توسيع النموذج ليكون أكبر */
 form {
+  border: 1px solid white;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,41 +29,49 @@ form {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 30px;
   border-radius: 8px;
-  width: 100%;
-  height: 350px;
+  width: 900px;
+  height: 400px;
 }
 .form-group {
   width: 100%;
   justify-content: center;
 }
 
-/* تصميم الحقول مع ظل أزرق */
-.input-shadow {
-  box-shadow: 0 0 10px 0 rgba(0, 123, 255, 0.7); /* ظل أزرق */
-  color: black; /* لضمان أن النص داخل الحقول مرئي */
-}
-
 /* تكبير حجم الحقول */
 input {
+  background: black;
   color: black;
   padding: 15px; /* تكبير الحقول */
   border-radius: 4px;
   font-size: 1.1rem; /* تكبير حجم الخط */
 }
-
+input:focus {
+  background: rgb(192, 192, 192);
+  color: black;
+  padding: 15px; /* تكبير الحقول */
+  border-radius: 4px;
+  font-size: 1.1rem; /* تكبير حجم الخط */
+}
 /* تغيير لون العناوين إلى البرتقالي */
 label {
-  color: #ffa500; /* لون برتقالي */
+  color: rgb(224, 224, 224); /* لون برتقالي */
   font-size: 1.2rem; /* تكبير الخط */
 }
 
 /* تصميم الأزرار لتكون عريضة مع استجابة أفضل */
 button {
+  background: rgb(255, 111, 0);
   border-radius: 4px;
   padding: 10px;
   font-size: 1.2rem; /* تكبير النص في الزر */
 }
 
+button:hover {
+  background: rgb(255, 111, 0);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 1.2rem; /* تكبير النص في الزر */
+}
 /* تحسين التصميم على الشاشات الصغيرة */
 @media (max-width: 768px) {
   .login-container {
