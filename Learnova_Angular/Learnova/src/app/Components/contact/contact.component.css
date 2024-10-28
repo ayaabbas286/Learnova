@@ -1,0 +1,77 @@
+/* Contact Us Container */
+.contact-us-container {
+  background: url('/Images/contact-us-banner.jpg') no-repeat center center fixed; 
+  background-size: cover;
+  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.9); /* Light text for dark background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  padding-top: 60px;
+}
+
+/* Header Banner */
+.banner {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 100px 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.banner h1 {
+  font-weight: bold; /* Make header text bold */
+  font-size: 3.5rem; /* Increase the font size */
+  color: rgb(255, 111, 0); /* Change color to RGB */
+}
+
+/* Overlay Styling */
+.background-img-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 60px 20px;
+  border-radius: 8px;
+}
+
+/* Footer Links and Hover */
+footer a {
+  color: #ffffff; /* White links for contrast */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: rgb(255, 111, 0); /* Hover effect for links */
+}
+
+/* Form and Container Styling */
+.form-control {
+  background-color: rgba(255, 255, 255, 0.1); /* Light input background for contrast */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for inputs */
+  color: #ffffff; /* White text for inputs */
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.2); /* Solid background on focus */
+  color: #ffffff; /* Keep text white */
+  border-color: rgb(255, 111, 0); /* Border color change on focus */
+}
+
+.btn-primary {
+  background-color: rgb(255, 111, 0); /* Primary button color */
+  border: none; /* Remove border */
+}
+
+.btn-primary:hover {
+  background-color: rgb(200, 90, 0); /* Darker shade on hover */
+  border-color: rgb(200, 90, 0);
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  .contact-us-container {
+      padding: 40px 10px; /* Adjust padding for smaller screens */
+  }
+
+  .banner {
+      padding: 60px 10px; /* Adjust padding for the banner */
+  }
+}
