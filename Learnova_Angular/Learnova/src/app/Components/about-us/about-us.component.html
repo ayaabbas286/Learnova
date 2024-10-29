@@ -15,7 +15,8 @@
         together top educators to deliver world-class content.
       </p>
 
-      <button class="btn btn-danger mt-4 btn-lg">Explore Courses</button>
+      <button class="btn btn-danger mt-4 btn-lg" [routerLink]="'/courses'">Explore Courses</button>
+      <router-outlet></router-outlet>
     </div>
 
     <div class="container mb-5">
@@ -106,10 +107,14 @@
 
             <!-----------------------experts section----->
             <div class="container pt-5">
-              <!-- <p class="lead title ">Our Teams of Experts are dedicated professionals with deep industry knowledge,
-            ready to guide you through every step of your learning journey, ensuring you gain practical skills
-             and valuable insights</p> -->
-              <app-instructors></app-instructors>
+
+              <app-instructors>
+                <!---contnet-injection-->
+                <p class="lead  pb-4 ">Our Teams of Experts are dedicated professionals with deep industry knowledge,
+                  ready to guide you through every step of your learning journey, ensuring you gain practical skills
+                   and valuable insights</p>
+
+              </app-instructors>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router'
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
 import { Header2Component } from './Components/header2/header2.component';
+import { SupportComponent } from "./Components/support/support.component";
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import { Header2Component } from './Components/header2/header2.component';
     HomeComponent,
     RouterModule,
     Header2Component,
-  ],
+    SupportComponent
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

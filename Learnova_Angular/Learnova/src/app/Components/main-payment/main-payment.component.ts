@@ -17,12 +17,10 @@ export class MainPaymentComponent {
 
 // Display control for proceed button
 isProceedVisible: boolean = true;
-isNotProceedVisible: boolean = false;
 
 
 onProceedClick() {
   this.isProceedVisible = false;
-  this.isNotProceedVisible = true;
 }
 
 
@@ -31,15 +29,9 @@ isConfirmed: boolean = false;
 
 toggleConfirmation() {
   this.isConfirmed = !this.isConfirmed;
-  console.log(this.isConfirmed);
+
+
 }
-
-
-
-
-
-
-
 
 
   // Initialize states for the plan cards
@@ -48,8 +40,24 @@ toggleConfirmation() {
   statusthree: boolean = false;
 
   // Default selected plan and cost
-  theplan: string = 'Yearly Plan';
   thecost: number = 199.00;
+  activePlan: string = 'yearly'; // Default active plan
+
+  // Method to set the active plan
+  setActivePlan(plan: string) {
+    this.activePlan = plan;
+    console.log(this.activePlan);
+    if(this.activePlan=='yearly'){
+      this.thecost = 199.00;
+
+    }else if(this.activePlan=='monthly'){
+      this.thecost=399.00;
+    }else{
+      this.thecost=266.00;
+
+
+    }
+  }
 
   // Display state for proceed button
   display: boolean = true;
@@ -58,7 +66,6 @@ toggleConfirmation() {
   // Payment-related properties
   inputValue: string = ''; // Clear input
   showAlert: boolean = false;
-  confirmtrans: boolean = false;
 
   // Form data for handling user input
   formData = {
@@ -67,38 +74,10 @@ toggleConfirmation() {
     message: '',
   };
 
-  // Toggle the active state of the monthly plan
-  oncardClick() {
-    this.status = !this.status;
-    this.statustwo = false; // Close the quarterly plan
-    this.statusthree = false; // Close the yearly plan
-    this.theplan = 'Monthly Plan';
-    this.thecost = 399.00;
-  }
 
-  // Toggle the active state of the quarterly plan
-  oncardTwoClick() {
-    this.statustwo = !this.statustwo;
-    this.status = false; // Close the monthly plan
-    this.statusthree = false; // Close the yearly plan
-    this.theplan = 'Quarterly Plan';
-    this.thecost = 266.00;
-  }
 
-  // Toggle the active state of the yearly plan
-  oncardThreeClick() {
-    this.statusthree = !this.statusthree;
-    this.status = false; // Close the monthly plan
-    this.statustwo = false; // Close the quarterly plan
-    this.theplan = 'Yearly Plan';
-    this.thecost = 199.00;
-  }
 
-  // Handle proceed button click
-  onproceedclick() {
-    this.display = !this.display;
-    this.nondisplay = true;
-  }
+
 
   // Function to handle payment logic
   pay() {
@@ -116,14 +95,12 @@ toggleConfirmation() {
 
   // Confirm transaction
   confirmed() {
-    this.confirmtrans = true;
+    this.isConfirmed = true;
+    setTimeout(() => {
+      window.location.reload();
+    }, 3000); // Delay in 1 second
   }
 
-  // Function to initialize popovers (if applicable)
-  initializePopovers() {
-    const popoverList: bootstrap.Popover[] = Array.from(document.querySelectorAll('[data-bs-toggle="popover"]')).map((popoverTriggerEl: Element) => {
-      return new bootstrap.Popover(popoverTriggerEl);
-    });
-  }
+
 
 }

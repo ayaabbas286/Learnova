@@ -15,7 +15,7 @@ import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { InstDAshBoardComponent } from './Components/inst-dash-board/inst-dash-board.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { MainPaymentComponent } from './Components/main-payment/main-payment.component';
-
+import { CoursePaymentComponent } from './Components/course-payment/course-payment.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'courses', component: CoursesComponent },
@@ -26,7 +26,7 @@ export const routes: Routes = [
   { path: 'Coding', component: CodingComponent },
   { path: 'UxUi', component: UxUiComponent },
   { path: 'Network', component: NetworkComponent },
-
+  { path: 'course-payment', component: CoursePaymentComponent},
   { path: 'cart', component: CartComponent },
 
   { path: 'ar', component: ArLanguageComponent },
