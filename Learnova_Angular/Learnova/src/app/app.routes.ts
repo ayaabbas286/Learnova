@@ -34,9 +34,6 @@ export const routes: Routes = [
   { path: 'ar', component: ArLanguageComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'main-payment', component: MainPaymentComponent },
-
-
-  { path: 'register', component: RegisterComponent },
   { path: 'InstDAshBoard', component: InstDAshBoardComponent },
   { path: '**', component: ErrorComponent },
 ];
