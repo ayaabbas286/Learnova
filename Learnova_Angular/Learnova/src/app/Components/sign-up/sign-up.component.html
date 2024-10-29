@@ -64,20 +64,6 @@
           </div>
 
           <div class="row">
-            <!-- Phone -->
-            <div class="col-md-6 mb-3">
-              <label for="phone" class="form-label">Phone</label>
-              <input
-                type="tel"
-                class="form-control"
-                id="phone"
-                [(ngModel)]="phone"
-                name="phone"
-                required
-              />
-            </div>
-
-            <!-- Email -->
             <div class="col-md-6 mb-3">
               <label for="email" class="form-label">Email</label>
               <input
@@ -89,8 +75,6 @@
                 required
               />
             </div>
-
-            <!-- Confirm Email -->
             <div class="col-md-6 mb-3">
               <label for="confirmEmail" class="form-label">Confirm Email</label>
               <input
@@ -139,6 +123,17 @@
 
           <!-- Profile Picture -->
           <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="phone"
+                [(ngModel)]="phone"
+                name="phone"
+                required
+              />
+            </div>
             <div class="col-md-6 mb-3">
               <label for="profilePicture" class="form-label custom-file-upload"
                 >Profile Picture</label
@@ -233,7 +228,7 @@
           <div class=" d-flex justify-content-center">
             <button
               type="submit"
-              class="btn btn-primary w-25"
+              class="btn btn-primary btnsign-up w-25"
               [disabled]="signupForm.invalid || !agreeToPolicy"
             >
               Sign Up

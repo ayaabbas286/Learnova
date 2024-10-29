@@ -17,10 +17,9 @@
 }
 .card-body {
   padding: 2rem;
-    border-radius: 10px;
+  border-radius: 10px;
 
   background-color: rgb(27, 27, 27);
-
 }
 .card h3 {
   color: #ff5900;
@@ -36,15 +35,18 @@
   font-size: 1.1rem;
   margin-bottom: 30px;
 }
+.btnsign-up {
+  border-color: #f7f7f7;
+  color: #ffffff !important;
+}
 
 .btn-primary {
   background-color: rgb(18, 18, 18);
   border-color: #ff5900;
   color: #ff5900;
-
 }
-.teacher-btn{
-  margin-right:20px !important;;
+.teacher-btn {
+  margin-right: 20px !important;
 }
 
 .btn-secondary {
@@ -72,9 +74,9 @@ span {
   background: #000000;
   border: 1px solid rgb(0, 0, 0);
 }
-h5{
+h5 {
   margin-top: -50px;
-color: #6e6f70;
+  color: #6e6f70;
 }
 .form-control {
   border-radius: 2px;
@@ -92,7 +94,8 @@ color: #6e6f70;
 }
 
 /* Checkbox Styling */
-.form-check-label a , a{
+.form-check-label a,
+a {
   text-decoration: underline;
   color: #ff5900;
   text-decoration: none;
