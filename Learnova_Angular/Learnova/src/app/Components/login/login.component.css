@@ -1,7 +1,7 @@
-/* جعل خلفية الصفحة سوداء */
+
 .login-container {
   background: black;
-  height: 900px;
+  height: 100vh;
   width: 100%;
   /* max-width: 1200px; */
   /* border: 1px solid red; */
@@ -18,15 +18,14 @@
   width: 900px;
   height: 500px;
 }
-/* توسيع النموذج ليكون أكبر */
 form {
-  border: 1px solid white;
-
+  border: 1px solid rgb(0, 0, 0);
+/* margin-top: -300px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(27,27, 27);
   padding: 30px;
   border-radius: 8px;
   width: 900px;
@@ -37,42 +36,44 @@ form {
   justify-content: center;
 }
 
-/* تكبير حجم الحقول */
 input {
-  background: black;
-  color: black;
-  padding: 15px; /* تكبير الحقول */
+  background: rgba(65, 65, 65, 0.703);
+  color: rgb(255, 255, 255);
+  padding: 15px;
   border-radius: 4px;
-  font-size: 1.1rem; /* تكبير حجم الخط */
+  border-color:  rgb(142, 142, 142) ;
+
+  font-size: 1.1rem;
 }
 input:focus {
-  background: rgb(192, 192, 192);
-  color: black;
-  padding: 15px; /* تكبير الحقول */
+  background: rgba(65, 65, 65, 0.703);
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  border-color:  rgb(255, 255, 255) ;
+  outline:none;
+  box-shadow: none !important;
   border-radius: 4px;
-  font-size: 1.1rem; /* تكبير حجم الخط */
-}
-/* تغيير لون العناوين إلى البرتقالي */
-label {
-  color: rgb(224, 224, 224); /* لون برتقالي */
-  font-size: 1.2rem; /* تكبير الخط */
+  font-size: 1.1rem;
 }
 
-/* تصميم الأزرار لتكون عريضة مع استجابة أفضل */
+label {
+  color: rgb(224, 224, 224);
+  font-size: 1.2rem; /
+}
+
 button {
   background: rgb(255, 111, 0);
   border-radius: 4px;
   padding: 10px;
-  font-size: 1.2rem; /* تكبير النص في الزر */
+  font-size: 1.2rem;
 }
 
 button:hover {
   background: rgb(255, 111, 0);
   border-radius: 4px;
   padding: 10px;
-  font-size: 1.2rem; /* تكبير النص في الزر */
+  font-size: 1.2rem;
 }
-/* تحسين التصميم على الشاشات الصغيرة */
 @media (max-width: 768px) {
   .login-container {
     padding: 20px;
@@ -80,11 +81,11 @@ button:hover {
 
   form {
     padding: 20px;
-    width: 100%; /* توسيع النموذج */
+    width: 100%;
   }
 
   label {
-    font-size: 1rem; /* تصغير حجم العنوان قليلاً على الشاشات الصغيرة */
+    font-size: 1rem;
   }
 
   input {

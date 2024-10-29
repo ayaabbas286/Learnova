@@ -1,0 +1,280 @@
+/* Container styling */
+.login-container {
+  height: 100vh;
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-form {
+  max-width: 400px;
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* Title and Subtitle */
+h2 {
+  color: #ffffff;
+}
+
+.text-muted {
+  color: #bbbbbb;
+}
+
+/* Social buttons */
+.social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-facebook,
+.btn-google {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+}
+
+.btn-google {
+  background-color: #4285f4;
+}
+
+.social-buttons i {
+  margin-right: 8px;
+}
+
+/* Divider */
+.divider {
+  margin: 15px 0;
+  position: relative;
+  color: #aaa;
+  text-align: center;
+}
+
+.divider span {
+  background-color: #2c2c2c;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #333;
+  z-index: 0;
+}
+
+/* Form styling */
+.form-group {
+  position: relative;
+}
+
+.input-shadow {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+.input-shadow::placeholder {
+  color: #888;
+}
+
+.input-shadow:focus {
+  border-color: #555;
+  box-shadow: none;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.btn-primary {
+  background-color: #c0392b;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.forgot-password {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Remember me checkbox */
+.form-check-input {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background-color: #444;
+  border-color: #555;
+}
+
+.form-check-label {
+  color: #bbb;
+}
+/* Container styling */
+.login-container {
+  height: 100vh;
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-form {
+  max-width: 400px;
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 20px;
+  color: #ffffff;
+}
+
+/* Title and Subtitle */
+h2 {
+  color: #ffffff;
+}
+
+.text-muted {
+  color: #bbbbbb;
+}
+
+/* Social buttons */
+.social-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-facebook,
+.btn-google {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+}
+
+.btn-google {
+  background-color: #4285f4;
+}
+
+.social-buttons i {
+  margin-right: 8px;
+}
+
+/* Divider */
+.divider {
+  margin: 15px 0;
+  position: relative;
+  color: #aaa;
+  text-align: center;
+}
+
+.divider span {
+  background-color: #2c2c2c;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #333;
+  z-index: 0;
+}
+
+/* Form styling */
+.form-group {
+  position: relative;
+}
+
+.input-shadow {
+  background-color: #333;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+.input-shadow::placeholder {
+  color: #888;
+}
+
+.input-shadow:focus {
+  border-color: #555;
+  box-shadow: none;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.btn-primary {
+  background-color: #c0392b;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.forgot-password {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Remember me checkbox */
+.form-check-input {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  background-color: #444;
+  border-color: #555;
+}
+
+.form-check-label {
+  color: #bbb;
+}

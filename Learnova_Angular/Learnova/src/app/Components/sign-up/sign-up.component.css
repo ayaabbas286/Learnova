@@ -1,13 +1,12 @@
-/* General Card Styling */
 .container-fluid {
   display: flex;
   justify-content: center;
   background-color: #000000;
+  margin-bottom: 50px;
 }
 .card {
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* background-color: #f8f9fa; */
+  padding: 0%;
+  box-shadow: 0 4px 8px rgba(79, 79, 79, 0.1);
 }
 
 .card-title {
@@ -18,32 +17,48 @@
 }
 .card-body {
   padding: 2rem;
+  border-radius: 10px;
+
+  background-color: rgb(27, 27, 27);
 }
 .card h3 {
-  color: rgb(255, 111, 0);
+  color: #ff5900;
   text-align: start;
+  font-size: 30px;
   padding-bottom: 50px;
 }
 
 /* Button Styling */
 .btn {
   width: 120px;
-  padding: 10px 0;
+  padding: 5px 0;
   font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+.btnsign-up {
+  border-color: #f7f7f7;
+  color: #ffffff !important;
 }
 
 .btn-primary {
-  background-color: rgb(255, 111, 0);
-  border-color: #007bff;
+  background-color: rgb(18, 18, 18);
+  border-color: #ff5900;
+  color: #ff5900;
+}
+.teacher-btn {
+  margin-right: 20px !important;
 }
 
 .btn-secondary {
-  background-color: #000000;
+  background-color: rgb(18, 18, 18);
   border-color: #ffffff;
 }
 /* Role Button Hover Effect */
 .btn:hover {
   opacity: 0.8;
+  background-color: #ff5900;
+  color: #ffffff;
+  border-color: #343a40;
 }
 
 /* Form Field Styling */
@@ -57,30 +72,37 @@ span {
 .card-form,
 .card-rol {
   background: #000000;
-  border: 1px solid white;
+  border: 1px solid rgb(0, 0, 0);
+}
+h5 {
+  margin-top: -50px;
+  color: #6e6f70;
 }
 .form-control {
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  border: 0px solid rgba(0, 0, 0, 0.5);
+  background: rgba(65, 65, 65, 0.703);
   color: #f7f7f7;
 }
 
 .form-control:focus {
-  border-color: #fdfdfd;
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+  border: 1px solid #ffffff;
+  box-shadow: none;
   outline: none;
   background-color: rgb(46, 46, 46);
   color: #ffffff;
 }
 
 /* Checkbox Styling */
-.form-check-label a {
+.form-check-label a,
+a {
   text-decoration: underline;
-  color: #f8f8f8;
+  color: #ff5900;
   text-decoration: none;
 }
-
+.form-check-input {
+  accent-color: #ff6600; /* Change checkbox color */
+}
 .form-check-label a:hover {
   text-decoration: none;
 }
