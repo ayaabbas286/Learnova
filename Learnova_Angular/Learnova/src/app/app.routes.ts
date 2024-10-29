@@ -4,7 +4,6 @@ import { ErrorComponent } from './Components/error/error.component';
 import { CoursesComponent } from './Components/courses/courses.component';
 import { InstructorsComponent } from './Components/instructors/instructors.component';
 import { LoginComponent } from './Components/login/login.component';
-import { RegisterComponent } from './Components/register/register.component';
 import { NotificationsComponent } from './Components/notifications/notifications.component';
 import { ArLanguageComponent } from './Components/ar-language/ar-language.component';
 import { CartComponent } from './Components/cart/cart.component';
@@ -16,6 +15,7 @@ import { InstDAshBoardComponent } from './Components/inst-dash-board/inst-dash-b
 import { ContactComponent } from './Components/contact/contact.component';
 import { MainPaymentComponent } from './Components/main-payment/main-payment.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
+import { SignInComponent } from './Components/sign-in/sign-in.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -28,7 +28,7 @@ export const routes: Routes = [
   { path: 'UxUi', component: UxUiComponent },
   { path: 'Network', component: NetworkComponent },
   { path: 'sign-up', component: SignUpComponent },
-
+  { path: 'sign-in', component: SignInComponent },
   { path: 'cart', component: CartComponent },
 
   { path: 'ar', component: ArLanguageComponent },

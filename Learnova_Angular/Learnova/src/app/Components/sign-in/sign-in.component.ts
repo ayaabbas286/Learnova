@@ -1,20 +1,26 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-sign-in',
   standalone: true,
-  imports: [RouterModule, FormsModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  imports: [ RouterModule,FormsModule],
+  templateUrl: './sign-in.component.html',
+  styleUrl: './sign-in.component.css'
 })
-export class LoginComponent {
+export class SignInComponent {
+  rememberMe: boolean = false;
   email: string = '';
   password: string = '';
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {  const rememberedEmail = localStorage.getItem('rememberedEmail');
+    const rememberedPassword = localStorage.getItem('rememberedPassword');
+    if (rememberedEmail && rememberedPassword) {
+      this.email = rememberedEmail;
+      this.password = rememberedPassword;
+      this.rememberMe = true;
+    }}
 
   // تنفيذ عملية تسجيل الدخول
   onLogin() {
@@ -31,6 +37,15 @@ export class LoginComponent {
     const user = storedUsers.find(
       (user) => user.email === this.email && user.password === this.password
     );
+    if (user) {
+      // Save credentials if "Remember me" is checked
+      if (this.rememberMe) {
+        localStorage.setItem('rememberedEmail', this.email);
+        localStorage.setItem('rememberedPassword', this.password);
+      } else {
+        localStorage.removeItem('rememberedEmail');
+        localStorage.removeItem('rememberedPassword');
+      }
 
     if (user) {
       // التحقق من الدور وتوجيه المستخدم
@@ -41,7 +56,7 @@ export class LoginComponent {
       }
     } else {
       // رسالة تنبيه عند إدخال بيانات خاطئة
-      alert('البريد الإلكتروني أو كلمة المرور غير صحيحة.');
+      alert('ًWrong Email or Password!');
     }
   }
-}
+  }}
