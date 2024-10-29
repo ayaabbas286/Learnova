@@ -15,6 +15,7 @@ import { AboutUsComponent } from './Components/about-us/about-us.component';
 import { InstDAshBoardComponent } from './Components/inst-dash-board/inst-dash-board.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { MainPaymentComponent } from './Components/main-payment/main-payment.component';
+import { SignUpComponent } from './Components/sign-up/sign-up.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -26,6 +27,7 @@ export const routes: Routes = [
   { path: 'Coding', component: CodingComponent },
   { path: 'UxUi', component: UxUiComponent },
   { path: 'Network', component: NetworkComponent },
+  { path: 'sign-up', component: SignUpComponent },
 
   { path: 'cart', component: CartComponent },
 
