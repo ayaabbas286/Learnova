@@ -19,7 +19,7 @@
 }
 .dropdown-menu li a:hover {
   background-color: rgb(23, 23, 23);
-  border-bottom: 1px solid rgba(255, 81, 0, 0.978) ;
+  border-bottom: 1px solid rgba(255, 81, 0, 0.978);
 }
 .input-group-text {
   background-color: none;
@@ -52,8 +52,16 @@ a {
   color: rgb(61, 61, 61);
 }
 .dropdown-menu {
+  display: none;
+  pointer-events: auto;
   background-color: rgb(27, 27, 27);
   color: #ffff;
+}
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.nav-link.dropdown-toggle {
+  cursor: pointer;
 }
 .dropdown-item {
   color: #ffff;
@@ -67,7 +75,6 @@ a {
   border-radius: 5px !important;
   margin-right: -100px;
   margin-left: 100px;
-
 }
 .searchbar:focus {
   outline: none;
@@ -94,7 +101,6 @@ a {
 .bi-bag {
   margin-right: 20px;
   font-size: 20px;
-
 }
 .cart-counter {
   position: absolute;
