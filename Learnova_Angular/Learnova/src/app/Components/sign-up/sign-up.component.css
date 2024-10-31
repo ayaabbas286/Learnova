@@ -8,7 +8,6 @@
 .card {
   box-shadow: 0 4px 8px rgba(79, 79, 79, 0.1);
   margin-top: -10px;
-
 }
 
 .card-title {
@@ -19,14 +18,13 @@
 }
 .card-body {
   padding-left: 4rem;
-  padding-right: 4rem ;
-  padding-top: 2rem ;
+  padding-right: 4rem;
+  padding-top: 2rem;
 
   border-radius: 10px;
   width: 800px;
   background-color: rgb(27, 27, 27) !important;
   margin-left: -30px !important;
-
 }
 .card h3 {
   color: #ffffff;
@@ -288,7 +286,7 @@ a {
   .card-rol,
   .rol-row {
     width: 100%;
-    height: auto; 
+    height: auto;
   }
 
   .card-title {
@@ -325,5 +323,29 @@ a {
     /* border: 1px solid red; */
     width: 600px;
     margin-left: 100px;
+  }
+}
+/* ******************************************** */
+@media (max-width: 500px) {
+  .form-row {
+    display: flex;
+    justify-content: center;
+  }
+  .card-form {
+    width: 400px;
+
+    border: 1px solid;
+    margin: 0;
+    justify-items: center;
+    justify-content: center;
+  }
+  .card-body {
+    
+    padding: 0px;
+    border: 1px solid red;
+    width: 350px;
+    margin: 0 0 0 40px !important;
+    justify-items: center !important;
+    justify-content: center !important;
   }
 }
