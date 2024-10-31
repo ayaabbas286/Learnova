@@ -2,7 +2,7 @@
   background-color: black;
 }
 .container {
-  height: 400vh;
+  height: 500vh;
   background-color: black;
 }
 .slider-topseller {
@@ -87,7 +87,7 @@
   color: #ffffff;
 }
 .btn.active {
-  border: 1px solid rgb(136, 46, 1);
+  border: 1px solid orangered;
   background-color: rgb(0, 0, 0);
 
   /* background-color: rgba(255, 111, 0, 0.042); */
@@ -95,10 +95,34 @@
 .btn-all-courses{
   border: 1px solid rgb(255, 255, 255);
   background-color: rgb(0, 0, 0);
+margin-bottom: 80px;
+margin-top: 20px;
+}
+.btn-all-courses:hover{
+  background-color:orangered;
+  color: white;
+  border: 1px solid rgb(0, 0, 0);
 
 }
 .routing-container{
   margin-bottom: -100px;
+}
+.expert-card{
+  background-color: black;
+}
+.expert-card img {
+height: 150px;
+width: 150px;
+}
+.btn-subscribe{
+  border: 1px solid orangered;
+  background-color: rgb(0, 0, 0);
+margin-bottom: 80px;
+margin-top: 20px;
+}
+.btn-subscribe:hover{
+  background-color:orangered;
+  color: white;
 }
 @media (max-width: 768px) {
   .col-md-2 {

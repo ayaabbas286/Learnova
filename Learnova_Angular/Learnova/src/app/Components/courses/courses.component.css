@@ -43,6 +43,16 @@ body {
 
   font-weight: 500;
 }
+.heading {
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5),
+    -1px -1px 3px rgba(0, 0, 0, 0.893);
+  font-weight: 500;
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+}
 @media (max-height: 600px) {
   .card {
     font-size: 14px; /* تصغير حجم النص على الشاشات الصغيرة */

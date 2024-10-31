@@ -1,7 +1,7 @@
 <div class="main-content">
   <div class="container">
     <div class="row img-container">
-      <img src="Images/2151205384.jpg" alt="" />
+      <img src="Images/26240.jpg" alt="" />
     </div>
     <!-- First part the slider -->
     <div class="text-center popular-heading">
@@ -213,5 +213,75 @@
         </button>
       </div>
     </div>
+    <div class="container text-center">
+      <h2 class="mb-6 text-white mb-5 title">Learnova Experts</h2>
+      <ng-content></ng-content>
+
+      <div class="row slider-topseller">
+        <div
+          id="essentialSkillsCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Create carousel items with *ngFor, grouping by chunks of 5 experts per carousel item -->
+            <div
+              *ngFor="let group of getExpertGroups(experts, 5); let i = index"
+              [ngClass]="{ 'carousel-item': true, active: i === 0 }"
+            >
+              <div class="row justify-content-center">
+                <div
+                  class="col-md-2 col-sm-4 col-6 mb-4"
+                  *ngFor="let expert of group"
+                >
+                  <div class="card expert-card">
+                    <img
+                      [src]="expert.image"
+                      class="card-img-top rounded-circle"
+                      [alt]="expert.name"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">{{ expert.name }}</h5>
+                      <p class="card-text">{{ expert.role }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#essentialSkillsCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#essentialSkillsCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="btn-courses d-flex justify-content-center">
+        <button class=" btn btn-all-courses mt-4 btn-lg" routerLink="/instructors">
+          See All Instructors
+        </button>
+      </div>
+      <div class="learning-banner text-white">
+        <h1>Start your learning journey today.</h1>
+        <p>Unlimited access to more than 1,000 video courses in Arabic, starting from <span> 499 EGP</span></p>
+        <button class=" btn btn-subscribe mt-4 btn-lg " routerLink="/main-payment" >Subscribe now</button>
+      </div>
+    </div>
+
   </div>
 </div>

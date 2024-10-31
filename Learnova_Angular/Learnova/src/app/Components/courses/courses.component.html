@@ -3,6 +3,9 @@
     <!-- <div class="text-center heading">
       <p>Randomly Selected Courses</p>
     </div> -->
+    <div class="text-center heading">
+      <p>Explore Inspiring Courses Online</p>
+    </div>
     <div class="row">
       <div
         *ngFor="let course of randomCourses"
@@ -17,7 +20,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ course.title }}</h5>
           <p class="card-text">The trainer: {{ course.instructor }}</p>
-          <p>Price: {{ course.price }} جنيه</p>
+          <p>Price: {{ course.price }} EGP</p>
           <div>
             <a class="btn" (click)="addToCart(course)">Add to Cart</a>
             <a href="/course-payment" class="btn btn-danger">Buy Now</a>

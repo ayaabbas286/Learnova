@@ -71,12 +71,12 @@ body {
 .btn {
   background-color: rgb(26, 26, 26);
   margin-top: -10px;
-  border: 1px solid rgb(136, 46, 1);
+  border: 1px solid orangered;
   margin-right: 15px;
   color: #ffffff;
 }
 .btn:hover {
-  background-color: rgb(235, 65, 8);
+  background-color: orangered;
 
 }
 /* إعداد الشبكة */
