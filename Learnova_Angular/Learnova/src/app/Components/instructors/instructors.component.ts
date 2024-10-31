@@ -60,11 +60,6 @@ export const experts: Expert[] = [
     image: 'Images/Inst_img/Mohammed_Issa.jpeg',
   },
   {
-    name: 'Ahmed Nazmy',
-    role: 'IT&Network Instractour',
-    image: 'Images/Inst_img/Ahmed_N.jpeg',
-  },
-  {
     name: 'Moustafa Makram',
     role: 'Graphic Designer Instractour',
     image: 'Images/Inst_img/Moustafa_M.jpeg',
@@ -110,15 +105,28 @@ export const experts: Expert[] = [
     image: 'Images/Inst_img/Mohammed_Issa.jpeg',
   },
   {
-    name: 'Ahmed Nazmy',
-    role: 'IT&Network Instractour',
-    image: 'Images/Inst_img/Ahmed_N.jpeg',
+    name: 'Moustafa Makram',
+    role: 'Graphic Designer Instractour',
+    image: 'Images/Inst_img/Moustafa_M.jpeg',
+  },
+  {
+    name: 'Mohammed Issa ',
+    role: 'Coding Instractour',
+    image: 'Images/Inst_img/Mohammed_Issa.jpeg',
   },
   {
     name: 'Moustafa Makram',
     role: 'Graphic Designer Instractour',
     image: 'Images/Inst_img/Moustafa_M.jpeg',
   },
-
-
+  {
+    name: ' Mohamed El-Desoky',
+    role: 'Coding Instractour',
+    image: 'Images/Inst_img/d.jpeg',
+  },
+  {
+    name: 'Moustafa Makram',
+    role: 'Graphic Designer Instractour',
+    image: 'Images/Inst_img/Moustafa_M.jpeg',
+  },
 ];

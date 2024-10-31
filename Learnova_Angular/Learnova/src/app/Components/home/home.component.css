@@ -1,10 +1,6 @@
 .main-content {
   background-color: black;
 }
-.container {
-  height: 500vh;
-  background-color: black;
-}
 .slider-topseller {
   margin-top: 10px;
   height: 300px;
@@ -18,7 +14,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   margin-left: 10px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid orangered;
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5),
     -1px -1px 3px rgba(0, 0, 0, 0.893);
@@ -36,23 +32,20 @@
   margin-left: 10px;
 }
 .carousel-control-next {
-  margin-right: -15px;
+  margin-right: -20px;
   margin-top: 18px;
   height: 250px;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   width: 30px;
-  background-color: #1e1e1e;
+  background-color: #00000000;
 }
 .carousel-control-prev {
-  background-color: #1e1e1e;
-  margin-left: -15px;
+  background-color: #00000000;
+  margin-left: -20px;
   margin-top: 18px;
-  height: 250px;
-  border-radius: 15px;
+  height: 270px;
+  /* border-radius: 10px; */
   width: 30px;
-}
-.carousel-control-prev-icon {
-  color: #1e1e1e;
 }
 
 .carousel-item {
@@ -64,7 +57,9 @@
   background-color: #1e1e1e;
   color: white;
 }
-
+.courses-card-slider{
+  height: 100px;
+}
 .card-img-top {
   height: 150px;
   object-fit: cover;
@@ -77,7 +72,7 @@
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: black;
+  background-color: #000000;
   border-radius: 50%;
 }
 .btn {
@@ -86,6 +81,7 @@
   margin-right: 15px;
   color: #ffffff;
 }
+
 .btn.active {
   border: 1px solid orangered;
   background-color: rgb(0, 0, 0);
@@ -111,8 +107,9 @@ margin-top: 20px;
   background-color: black;
 }
 .expert-card img {
-height: 150px;
-width: 150px;
+height: 210px;
+width: 100%;
+padding: 20px;
 }
 .btn-subscribe{
   border: 1px solid orangered;
@@ -123,6 +120,10 @@ margin-top: 20px;
 .btn-subscribe:hover{
   background-color:orangered;
   color: white;
+}
+.expert-title{
+  color:orangered;
+
 }
 @media (max-width: 768px) {
   .col-md-2 {

@@ -232,4 +232,37 @@ export const Courses: courseModel.Course[] = [
     price: 100,
     id: 8,
   },
+  {
+    typ: 'graphic_design',
+    title: 'Mastering Photoshop',
+    image: 'Images/Top-10-Adobe-Photoshop-Tips.webp',
+    instructor: 'Aaron Nace',
+    price: 90,
+    id: 9,
+  },
+  {
+    typ: 'data_science',
+    title: 'Data Science with Python',
+    image: '/Images/datascience.jfif',
+    instructor: 'Jose Portilla',
+    price: 150,
+    id: 7,
+  },
+  {
+    typ: 'programming',
+    title: 'JavaScript Essentials',
+    image: 'Images/javascript-essentials.png',
+    instructor: 'Mosh Hamedani',
+    price: 120,
+    id: 6,
+  },
+  {
+    typ: 'ux_ui',
+    title: 'Motion Design & Animation ',
+    image:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0WNidF3Y8oCW-2mtp6KdjECyetsHADrsHHw&s',
+    instructor: 'Jonathan Lam',
+    price: 100,
+    id: 6,
+  },
 ];
