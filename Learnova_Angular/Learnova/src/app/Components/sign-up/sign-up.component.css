@@ -160,6 +160,12 @@ a {
   width: auto;
   /* box-shadow: -19px 20px 20px 1px rgb(255, 111, 0, 47%); */
 }
+.is-invalid {
+  border-color: red;
+}
+.text-danger {
+  color: red;
+}
 /* Media Queries */
 @media (max-width: 768px) {
   .container-fluid {
@@ -330,22 +336,30 @@ a {
   .form-row {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
-  .card-form {
-    width: 400px;
+  /* .card-form {
+    width: 320px;
 
-    border: 1px solid;
-    margin: 0;
-    justify-items: center;
-    justify-content: center;
-  }
-  .card-body {
-    
-    padding: 0px;
     border: 1px solid red;
-    width: 350px;
+    margin: 0;
+
+  } */
+  .card-body {
+    padding: 0px;
+    /* border: 1px solid red; */
+    width: 340px;
     margin: 0 0 0 40px !important;
     justify-items: center !important;
     justify-content: center !important;
+  }
+  .std-btn {
+    width: 90px;
+  }
+  .teacher-btn {
+    width: 90px;
+  }
+  .input {
+    width: 330px;
   }
 }

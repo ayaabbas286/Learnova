@@ -1,51 +1,49 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './sign-up.component.html',
-  styleUrl: './sign-up.component.css'
+  styleUrls: ['./sign-up.component.css'],
 })
 export class SignUpComponent {
   selectedRole: string = 'student';
   firstName: string = '';
   lastName: string = '';
-  phone: string = '';
+  phone: any;
   email: string = '';
   password: string = '';
   specialization: string = '';
   experience: number = 0;
   nationalId: string = '';
   country: string = '';
-  confirmEmail: any;
-  confirmPassword: any;
-  agreeToPolicy: any;
-  profilePicture: string = ''; // متغير لحفظ الصورة بعد التحويل إلى Base64
+  confirmEmail: string = '';
+  confirmPassword: string = '';
+  agreeToPolicy: boolean = false;
+  profilePicture: string = '';
 
   selectRole(role: string) {
     this.selectedRole = role;
   }
 
-  // وظيفة لقراءة الصورة المختارة وتحويلها إلى Base64
   onFileSelected(event: any) {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onload = () => {
-        this.profilePicture = reader.result as string; // حفظ الصورة كـ Base64
+        this.profilePicture = reader.result as string;
       };
-      reader.readAsDataURL(file); // قراءة الصورة
+      reader.readAsDataURL(file);
     }
   }
-  onSubmit() {
-    // Regular expression to check valid email domains
+
+  onSubmit(signupForm: NgForm) {
     const emailPattern =
       /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|hotmail\.com|outlook\.com)$/;
 
-    // Check if emails match and if the email ends with allowed domains
     if (this.email !== this.confirmEmail) {
       alert('Email and Confirm Email do not match!');
       return;
@@ -63,14 +61,14 @@ export class SignUpComponent {
       return;
     }
 
-    // حساب عدد المستخدمين الموجودين بالفعل في localStorage
     const existingUsersCount = Object.keys(localStorage).filter((key) =>
       key.startsWith('user_')
     ).length;
-    const newId = existingUsersCount + 1; // إنشاء معرف جديد يبدأ من 1
+
+    const newId = existingUsersCount + 1;
 
     const userData = {
-      id: newId, // إضافة المعرف هنا
+      id: newId,
       role: this.selectedRole,
       firstName: this.firstName,
       lastName: this.lastName,
@@ -82,13 +80,15 @@ export class SignUpComponent {
       experience: this.selectedRole === 'teacher' ? this.experience : '',
       nationalId: this.selectedRole === 'teacher' ? this.nationalId : '',
       country: this.selectedRole === 'teacher' ? this.country : '',
-      profilePicture: this.profilePicture, // إضافة الصورة المحفوظة في Base64
+      profilePicture: this.profilePicture,
       agreeToPolicy: this.agreeToPolicy,
     };
 
-    // حفظ بيانات المستخدم الجديد في localStorage مع مفتاح فريد 'user_<id>'
     localStorage.setItem(`user_${newId}`, JSON.stringify(userData));
 
-    alert(`Registration successful! Your data has been saved `);
+    alert(`Registration successful! Your data has been saved.`);
+    signupForm.reset();
   }
+
+ 
 }
