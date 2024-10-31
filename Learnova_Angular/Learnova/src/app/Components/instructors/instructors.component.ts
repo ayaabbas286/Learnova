@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { InstructorsServiceService } from '../Instructors-serv/instructors-service.service';
 import { OnInit } from '@angular/core';
 
 @Component({
@@ -12,10 +13,9 @@ import { OnInit } from '@angular/core';
 })
 export class InstructorsComponent implements OnInit {
   experts: Expert[] = [];
-
+  constructor(private instructorsService: InstructorsServiceService) {}
   ngOnInit(): void {
-    this.experts = experts;
-    this.getInstructorsFromLocalStorage();
+    this.experts = this.instructorsService.getExperts();
   }
 
   // وظيفة لجلب المدرسين من localStorage
@@ -119,4 +119,6 @@ export const experts: Expert[] = [
     role: 'Graphic Designer Instractour',
     image: 'Images/Inst_img/Moustafa_M.jpeg',
   },
+
+
 ];
