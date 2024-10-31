@@ -17,22 +17,25 @@ import { MainPaymentComponent } from './Components/main-payment/main-payment.com
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { SignInComponent } from './Components/sign-in/sign-in.component';
 import { CoursePaymentComponent } from './Components/course-payment/course-payment.component';
+import { PrivacyComponent } from './Components/privacy/privacy.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent,
+  {
+    path: 'home',
+    component: HomeComponent,
     children: [
       { path: '', redirectTo: 'Coding', pathMatch: 'full' }, // Redirect to Coding by default under 'home'
       { path: 'Coding', component: CodingComponent },
       { path: 'UxUi', component: UxUiComponent },
       { path: 'Network', component: NetworkComponent },
-    ]
+    ],
   },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'Coding', component: CodingComponent },
   { path: 'courses', component: CoursesComponent },
-   { path: 'Network', component: NetworkComponent },
-   { path: 'UxUi', component: UxUiComponent },
+  { path: 'Network', component: NetworkComponent },
+  { path: 'UxUi', component: UxUiComponent },
   { path: 'instructors', component: InstructorsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'notifications', component: NotificationsComponent },
@@ -44,6 +47,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'main-payment', component: MainPaymentComponent },
   { path: 'InstDAshBoard', component: InstDAshBoardComponent },
-  { path: '**', component: ErrorComponent }
+  { path: 'Privacy', component: PrivacyComponent },
+  { path: '**', component: ErrorComponent },
 ];
 

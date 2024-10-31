@@ -21,7 +21,8 @@
   letter-spacing: 2px;
 }
 .site-footer a {
-  color: #737373;
+  color: #ffffff;
+  text-decoration: none;
 }
 .site-footer a:hover {
   color: #3366cc;
@@ -35,7 +36,7 @@
   display: block;
 }
 .footer-links a {
-  color: #737373;
+  color: #e7e7e7;
 }
 .footer-links a:active,
 .footer-links a:focus,
