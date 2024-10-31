@@ -3,10 +3,12 @@
   justify-content: center;
   background-color: #000000;
   margin-bottom: 50px;
+  align-items: center;
 }
 .card {
-  padding: 0%;
   box-shadow: 0 4px 8px rgba(79, 79, 79, 0.1);
+  margin-top: -10px;
+
 }
 
 .card-title {
@@ -16,13 +18,18 @@
   text-align: center;
 }
 .card-body {
-  padding: 2rem;
-  border-radius: 10px;
+  padding-left: 4rem;
+  padding-right: 4rem ;
+  padding-top: 2rem ;
 
-  background-color: rgb(27, 27, 27);
+  border-radius: 10px;
+  width: 800px;
+  background-color: rgb(27, 27, 27) !important;
+  margin-left: -30px !important;
+
 }
 .card h3 {
-  color: #ff5900;
+  color: #ffffff;
   text-align: start;
   font-size: 30px;
   padding-bottom: 50px;
@@ -42,7 +49,7 @@
 
 .btn-primary {
   background-color: rgb(18, 18, 18);
-  border-color: #ff5900;
+  border-color: #ff5900a3;
   color: #ff5900;
 }
 .teacher-btn {
@@ -66,7 +73,7 @@
 .form-check-label,
 span {
   font-weight: bold;
-  color: #ffffff;
+  color: #919191;
 }
 
 .card-form,
@@ -79,7 +86,7 @@ h5 {
   color: #6e6f70;
 }
 .form-control {
-  border-radius: 2px;
+  border-radius: 8px;
   border: 0px solid rgba(0, 0, 0, 0.5);
   background: rgba(65, 65, 65, 0.703);
   color: #f7f7f7;
@@ -87,10 +94,10 @@ h5 {
 
 .form-control:focus {
   border: 1px solid #ffffff;
-  box-shadow: none;
   outline: none;
-  background-color: rgb(46, 46, 46);
   color: #ffffff;
+  border-color: #555;
+  box-shadow: none;
 }
 
 /* Checkbox Styling */
@@ -165,26 +172,26 @@ a {
   }
   .card-rol,
   .rol-row {
-    width: 100%; /* عرض البطاقة بالكامل على الشاشات الصغيرة */
-    height: auto; /* إعادة تعيين الارتفاع */
-    margin: 15px auto; /* محاذاة إلى المركز */
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
   }
 
   .card-title {
-    font-size: 1.2rem; /* تقليل حجم النص */
+    font-size: 1.2rem;
   }
 
   .btn {
-    width: 100%; /* زر يمتد على عرض البطاقة */
+    width: 100%;
   }
 
   .form-row {
-    width: 100%; /* جعل الصفات تمتد على عرض البطاقة */
-    flex-direction: column; /* تغيير اتجاه العناصر ليكون عمودياً */
+    width: 100%;
+    flex-direction: column;
   }
 
   .form-control {
-    font-size: 1rem; /* حجم النص في الحقول */
+    font-size: 1rem;
   }
   .card-rol {
     justify-items: center;
@@ -202,19 +209,19 @@ a {
 
 @media (max-width: 600px) {
   .card-title {
-    font-size: 1rem; /* تقليل حجم النص أكثر للأجهزة الصغيرة */
+    font-size: 1rem;
   }
 
   .btn {
-    font-size: 0.9rem; /* تقليل حجم النص في الأزرار */
+    font-size: 0.9rem;
   }
 
   .form-label {
-    font-size: 0.9rem; /* حجم النص في التسميات */
+    font-size: 0.9rem;
   }
   .card-rol {
     width: 300px;
-    /* box-shadow: -19px 20px 20px 2px rgb(255, 111, 0, 47%); */
+
     height: auto;
   }
   .rol-row {
@@ -222,8 +229,6 @@ a {
     justify-content: start;
     align-items: center;
     width: 350px;
-    /* margin-right: 50px; */
-    /* border: 1px solid red; */
   }
 }
 @media (min-width: 1000px) and (max-width: 1025px) {
@@ -231,30 +236,29 @@ a {
     display: flex;
     justify-content: center;
     background-color: #000000;
-    /* flex-direction: column-reverse; */
   }
   .card-rol,
   .rol-row {
-    width: 100%; /* عرض البطاقة بالكامل على الشاشات الصغيرة */
-    height: auto; /* إعادة تعيين الارتفاع */
+    width: 100%;
+    height: auto;
   }
 
   .card-title {
-    font-size: 1.2rem; /* تقليل حجم النص */
+    font-size: 1.2rem;
   }
 
   .btn {
-    width: 100%; /* زر يمتد على عرض البطاقة */
+    width: 100%;
   }
 
   .form-row {
     /* border: 1px solid; */
-    width: 100%; /* جعل الصفات تمتد على عرض البطاقة */
-    flex-direction: column; /* تغيير اتجاه العناصر ليكون عمودياً */
+    width: 100%;
+    flex-direction: column;
   }
 
   .form-control {
-    font-size: 1rem; /* حجم النص في الحقول */
+    font-size: 1rem;
   }
   .card-rol {
     justify-items: center;
@@ -283,8 +287,8 @@ a {
   }
   .card-rol,
   .rol-row {
-    width: 100%; /* عرض البطاقة بالكامل على الشاشات الصغيرة */
-    height: auto; /* إعادة تعيين الارتفاع */
+    width: 100%;
+    height: auto; 
   }
 
   .card-title {
@@ -292,17 +296,17 @@ a {
   }
 
   .btn {
-    width: 100%; /* زر يمتد على عرض البطاقة */
+    width: 100%;
   }
 
   .form-row {
     /* border: 1px solid; */
-    width: 100%; /* جعل الصفات تمتد على عرض البطاقة */
-    flex-direction: column; /* تغيير اتجاه العناصر ليكون عمودياً */
+    width: 100%;
+    flex-direction: column;
   }
 
   .form-control {
-    font-size: 1rem; /* حجم النص في الحقول */
+    font-size: 1rem;
   }
   .card-rol {
     justify-items: center;

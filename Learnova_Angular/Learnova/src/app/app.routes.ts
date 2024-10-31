@@ -19,25 +19,31 @@ import { SignInComponent } from './Components/sign-in/sign-in.component';
 import { CoursePaymentComponent } from './Components/course-payment/course-payment.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'courses', component: CoursesComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent,
+    children: [
+      { path: '', redirectTo: 'Coding', pathMatch: 'full' }, // Redirect to Coding by default under 'home'
+      { path: 'Coding', component: CodingComponent },
+      { path: 'UxUi', component: UxUiComponent },
+      { path: 'Network', component: NetworkComponent },
+    ]
+  },
   { path: 'about-us', component: AboutUsComponent },
+  { path: 'Coding', component: CodingComponent },
+  { path: 'courses', component: CoursesComponent },
+   { path: 'Network', component: NetworkComponent },
+   { path: 'UxUi', component: UxUiComponent },
   { path: 'instructors', component: InstructorsComponent },
   { path: 'login', component: LoginComponent },
   { path: 'notifications', component: NotificationsComponent },
-  { path: 'Coding', component: CodingComponent },
-  { path: 'UxUi', component: UxUiComponent },
-  { path: 'Network', component: NetworkComponent },
-  { path: 'course-payment', component: CoursePaymentComponent},
-
-
+  { path: 'course-payment', component: CoursePaymentComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'cart', component: CartComponent },
-
   { path: 'ar', component: ArLanguageComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'main-payment', component: MainPaymentComponent },
   { path: 'InstDAshBoard', component: InstDAshBoardComponent },
-  { path: '**', component: ErrorComponent },
+  { path: '**', component: ErrorComponent }
 ];
+

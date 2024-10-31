@@ -1,23 +1,25 @@
 <div class="container-fluid login-container">
-  <div class="row">
+  <div class="row form-contain">
     <!-- الجزء الأيسر: نموذج تسجيل الدخول -->
-    <div class="col-md-12 col-lg-12 col-sm-12 d-flex align-items-center justify-content-center d-form">
+    <div class="col-md-12 col-lg-12 col-sm-12 d-flex align-items-center justify-content-center d-form w-100">
       <form (ngSubmit)="onLogin()" class="p-4 w-75 text-center">
         <!-- Title and Subtitle -->
         <h2 class="mb-2">Login</h2>
-        <p class="text-muted mb-4">Access Your Existing Account</p>
+        <p class="text-muted  mb-4">Access Your Existing Account</p>
 
         <!-- Social Login Buttons -->
         <div class="social-buttons mb-3">
           <button type="button" class="btn btn-facebook mb-2">
             <i class="fab fa-facebook-f"></i> Facebook Login
           </button>
-          <button type="button" class="btn btn-google mb-2">
+          <!-- <button type="button" class="btn btn-google mb-2">
             <i class="fab fa-google"></i> Google Login
+          </button> -->
+          <button class="btn  btn-google btn-google-login">
+            <img src="Images/google.png" alt="Google Icon" class="google-icon" /> Google Login
           </button>
         </div>
 
-        <!-- Divider -->
         <div class="divider mb-3">
           <span>OR</span>
         </div>
