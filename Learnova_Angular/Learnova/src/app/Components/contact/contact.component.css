@@ -1,77 +1,122 @@
 /* Contact Us Container */
 .contact-us-container {
-  background: url('/Images/contact-us-banner.jpg') no-repeat center center fixed; 
+  background: url("contact-us-banner.jpg") no-repeat center center fixed;
   background-size: cover;
   min-height: 100vh;
-  color: rgba(255, 255, 255, 0.9); /* Light text for dark background */
+  color: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  padding-top: 60px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Unified opacity */
 }
 
 /* Header Banner */
 .banner {
-  background: rgba(0, 0, 0, 0.8);
-  padding: 100px 20px;
-  border-radius: 8px;
+  padding: 20px 20px;
+  /* Reduced padding */
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Unified opacity */
 }
 
 .banner h1 {
-  font-weight: bold; /* Make header text bold */
-  font-size: 3.5rem; /* Increase the font size */
-  color: rgb(255, 111, 0); /* Change color to RGB */
+  font-weight: bold;
+  font-size: 2.5rem;
+  /* Reduced font size */
+  color: rgb(255, 111, 0);
 }
 
 /* Overlay Styling */
 .background-img-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 60px 20px;
-  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Unified opacity */
+  padding: 0px 20px;
+  height: 100vh !important;
 }
 
 /* Footer Links and Hover */
-footer a {
-  color: #ffffff; /* White links for contrast */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: rgb(255, 111, 0); /* Hover effect for links */
-}
 
 /* Form and Container Styling */
 .form-control {
-  background-color: rgba(255, 255, 255, 0.1); /* Light input background for contrast */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for inputs */
-  color: #ffffff; /* White text for inputs */
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
 }
 
 .form-control:focus {
-  background-color: rgba(255, 255, 255, 0.2); /* Solid background on focus */
-  color: #ffffff; /* Keep text white */
-  border-color: rgb(255, 111, 0); /* Border color change on focus */
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-color: rgb(255, 111, 0);
 }
 
 .btn-primary {
-  background-color: rgb(255, 111, 0); /* Primary button color */
-  border: none; /* Remove border */
+  background-color: rgb(255, 111, 0);
+  border: none;
+  width: 50px;
+
+  max-width: 40%;
+
+  display: center;
+  /* Ensures button centers with text-align */
+  margin: 0 auto;
+  /* Limits width to 80% of the container */
+
+  justify-content: center;
 }
 
 .btn-primary:hover {
-  background-color: rgb(200, 90, 0); /* Darker shade on hover */
+  background-color: rgb(200, 90, 0);
   border-color: rgb(200, 90, 0);
+}
+
+/* Form Container Styling */
+.container form {
+  width: 60%;
+  /* Set a width for the form to make it narrower */
+  max-width: 500px;
+  /* Optionally, set a maximum width */
+  margin: 0 auto;
+  /* Center the form horizontally */
+}
+
+/* Adjusting Header and Form Spacing */
+.container.text-center.mt-4 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  /* Decrease top margin for header */
+}
+
+.container.mt-5 {
+  margin-top: 5px;
+  /* Decrease top margin for form */
 }
 
 /* Additional styles for responsiveness */
 @media (max-width: 768px) {
   .contact-us-container {
-      padding: 40px 10px; /* Adjust padding for smaller screens */
+    padding: 40px 10px;
   }
 
   .banner {
-      padding: 60px 10px; /* Adjust padding for the banner */
+    padding: 40px 10px;
   }
+
+  .container form {
+    width: 90%;
+    /* Increase width slightly on smaller screens */
+  }
+}
+@media (max-width: 780px) {
+  .background-img-overlay {
+    border: 1px solid;
+    height: 2000px !important;
+   background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
 }
