@@ -16,11 +16,17 @@ import { Courses } from '../courses/courses';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit  {
+  responsiveCards: number = 5;
+
   experts: Expert[] = [];
 
   constructor(private instructorsService: InstructorsServiceService) {}
 
   ngOnInit(): void {
+
+    if (window.innerWidth < 768) {
+      this.responsiveCards = 2;
+    }
     this.experts = this.instructorsService.getExperts();
     this.groupedCourses = this.getCourseGroups(Courses, 5);
 
