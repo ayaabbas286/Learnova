@@ -323,3 +323,23 @@ h2 {
     margin: 0 0 0 0.4px;
   }
 }
+@media (min-width: 800px) and (max-width: 1290px) {
+  .form-contain {
+    /* border: 1px solid rgb(0, 255, 34); */
+    width: 500px !important;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .d-form {
+    /* border: 1px solid rgb(248, 248, 248); */
+    width: 470px !important;
+    margin: 0;
+    padding: 0;
+  }
+  form {
+    /* border: 1px solid rgb(243, 0, 0); */
+    width: 400px !important;
+  }
+}

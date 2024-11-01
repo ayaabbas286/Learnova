@@ -1,21 +1,40 @@
 <div class="main-content">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row img-container">
-      <img src="Images/26240.jpg" alt="" />
+      <img src="Images/2151205384.jpg" alt="" />
+      <div class="text">
+        <h2>Start Your Online Journey</h2>
+        <p>
+          Start Your Online Journey With learnova with the biggest Library of
+          Video based courses
+        </p>
+        <button class="btn popup text-light w-auto"><a href="/main-payment">Subscribe Now</a></button>
+      </div>
     </div>
+
     <!-- First part the slider of popular courses -->
     <div class="text-center popular-heading">
       <p>Popular Courses</p>
     </div>
     <div class="row slider-topseller">
-      <div id="popularCoursesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div
+        id="popularCoursesCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
         <div class="carousel-inner">
-          <div *ngFor="let group of groupedCourses; let i = index" [ngClass]="{ 'carousel-item': true, active: i === 0 }">
+          <div
+            *ngFor="let group of groupedCourses; let i = index"
+            [ngClass]="{ 'carousel-item': true, active: i === 0 }"
+          >
             <div class="row justify-content-center">
-                <div *ngFor="let course of group" class="col-md-2 col-sm-6">
-
+              <div *ngFor="let course of group" class="col-md-2 col-sm-6">
                 <div class="card courses-card">
-                  <img [src]="course.image" class="card-img-top" [alt]="course.title" />
+                  <img
+                    [src]="course.image"
+                    class="card-img-top"
+                    [alt]="course.title"
+                  />
                   <div class="card-body courses-card-slider">
                     <h5 class="card-title course-title">{{ course.title }}</h5>
                     <p class="card-text">{{ course.instructor }}</p>
@@ -26,11 +45,21 @@
           </div>
         </div>
 
-        <button class="carousel-control-prev Course-btn-prev" type="button" data-bs-target="#popularCoursesCarousel" data-bs-slide="prev">
+        <button
+          class="carousel-control-prev Course-btn-prev"
+          type="button"
+          data-bs-target="#popularCoursesCarousel"
+          data-bs-slide="prev"
+        >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next Course-btn-next" type="button" data-bs-target="#popularCoursesCarousel" data-bs-slide="next">
+        <button
+          class="carousel-control-next Course-btn-next"
+          type="button"
+          data-bs-target="#popularCoursesCarousel"
+          data-bs-slide="next"
+        >
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -68,7 +97,7 @@
         <router-outlet></router-outlet>
       </div>
       <div class="btn-courses d-flex justify-content-center">
-        <button class=" btn btn-all-courses mt-4 btn-lg" routerLink="/courses">
+        <button class="btn btn-all-courses mt-4 btn-lg" routerLink="/courses">
           See All Courses
         </button>
       </div>
@@ -86,13 +115,17 @@
         >
           <div class="carousel-inner">
             <div
-              *ngFor="let group of getExpertGroups(experts, responsiveCardCols); let i = index"
+              *ngFor="
+                let group of getExpertGroups(experts, responsiveCardCols);
+                let i = index
+              "
               [ngClass]="{ 'carousel-item': true, active: i === 0 }"
             >
               <div class="row justify-content-center">
                 <div
                   class="col-md-2 col-sm-4 col-6 mb-4"
-                  *ngFor="let expert of group" class="col-md-{{ responsiveCardCols }}"
+                  *ngFor="let expert of group"
+                  class="col-md-{{ responsiveCardCols }}"
                 >
                   <div class="card expert-card">
                     <img
@@ -133,7 +166,10 @@
       </div>
       <!-- button od see all instructors -->
       <div class="btn-courses btn-instructors d-flex justify-content-center">
-        <button class=" btn btn-all-courses  mt-4 btn-lg" routerLink="/instructors">
+        <button
+          class="btn btn-all-courses mt-4 btn-lg"
+          routerLink="/instructors"
+        >
           See All Instructors
         </button>
       </div>
@@ -141,10 +177,17 @@
       <!-- learning banner &subscribtion -->
       <div class="learning-banner text-white">
         <h1>Start your learning journey today.</h1>
-        <p>Unlimited access to more than 1,000 video courses in Arabic, starting from <span> 499 EGP</span></p>
-        <button class=" btn btn-subscribe mt-4 btn-lg " routerLink="/main-payment" >Subscribe now</button>
+        <p>
+          Unlimited access to more than 1,000 video courses in Arabic, starting
+          from <span> 499 EGP</span>
+        </p>
+        <button
+          class="btn btn-subscribe mt-4 btn-lg"
+          routerLink="/main-payment"
+        >
+          Subscribe now
+        </button>
       </div>
     </div>
-
   </div>
 </div>
