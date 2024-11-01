@@ -121,23 +121,12 @@ margin-top: 20px;
   background-color:orangered;
   color: white;
 }
-.expert-title{
+.expert-title, .course-title{
   color:orangered;
 
 }
 
-/* .col-md-{{ responsiveCardCols }} {
-  flex: 0 0 calc(50% - 1.5rem);
-  max-width: calc(50% - 1.5rem);
-} */
-
-/* @media (max-width: 768px) {
-  .col-md-{{ responsiveCardCols }} {
-    flex: 0 0 calc(100% - 1rem);
-    max-width: calc(100% - 1rem);
-  }
-} */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .col-md-2 {
     flex: 0 0 50%;
     max-width: 50%;
@@ -157,3 +146,45 @@ margin-top: 20px;
     max-width: 19%;
   }
 }
+@media (max-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 calc(100% - 1rem);
+    max-width: calc(100% - 1rem);
+    height: 90px;
+    margin: 20px;
+    margin-bottom: 50px;
+  }
+  .btn-instructors{
+    margin-top:50px ;
+  }
+  .expert-card{
+    background-color: black;
+  }
+  .expert-card img{
+    width: 100%;
+    height: 150px;
+  }
+  .carousel-control-prev-icon{
+  margin-left:20px ;
+  left:20;
+
+}
+.carousel-control-next-icon{
+  margin-right:20px ;
+  right:20;
+}
+.routing-container{
+  margin-left: 25px;
+}
+.cards-container{
+  margin-left: -10px;
+}
+.courses-card-slider{
+  height: 130px;
+}
+.courses-card{
+  width: 165px;
+}
+  }
+
+

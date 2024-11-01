@@ -92,6 +92,10 @@ body {
 }
 @media (max-width: 600px) {
   .card {
+    margin-left: 50px;
     font-size: 14px; /* تصغير حجم النص على الشاشات الصغيرة */
+  }
+  .heading{
+    margin-left: -5px !important;
   }
 }

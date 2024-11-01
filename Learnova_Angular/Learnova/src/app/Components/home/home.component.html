@@ -12,11 +12,12 @@
         <div class="carousel-inner">
           <div *ngFor="let group of groupedCourses; let i = index" [ngClass]="{ 'carousel-item': true, active: i === 0 }">
             <div class="row justify-content-center">
-              <div *ngFor="let course of group" class="col-md-2">
-                <div class="card ">
+                <div *ngFor="let course of group" class="col-md-2 col-sm-6">
+
+                <div class="card courses-card">
                   <img [src]="course.image" class="card-img-top" [alt]="course.title" />
                   <div class="card-body courses-card-slider">
-                    <h5 class="card-title">{{ course.title }}</h5>
+                    <h5 class="card-title course-title">{{ course.title }}</h5>
                     <p class="card-text">{{ course.instructor }}</p>
                   </div>
                 </div>
@@ -25,11 +26,11 @@
           </div>
         </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#popularCoursesCarousel" data-bs-slide="prev">
+        <button class="carousel-control-prev Course-btn-prev" type="button" data-bs-target="#popularCoursesCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#popularCoursesCarousel" data-bs-slide="next">
+        <button class="carousel-control-next Course-btn-next" type="button" data-bs-target="#popularCoursesCarousel" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -63,7 +64,7 @@
           UI/UX
         </button>
       </div>
-      <div class="routing-container">
+      <div class="routing-container cards-container">
         <router-outlet></router-outlet>
       </div>
       <div class="btn-courses d-flex justify-content-center">
@@ -85,13 +86,13 @@
         >
           <div class="carousel-inner">
             <div
-              *ngFor="let group of getExpertGroups(experts, 5); let i = index"
+              *ngFor="let group of getExpertGroups(experts, responsiveCardCols); let i = index"
               [ngClass]="{ 'carousel-item': true, active: i === 0 }"
             >
               <div class="row justify-content-center">
                 <div
                   class="col-md-2 col-sm-4 col-6 mb-4"
-                  *ngFor="let expert of group"
+                  *ngFor="let expert of group" class="col-md-{{ responsiveCardCols }}"
                 >
                   <div class="card expert-card">
                     <img
@@ -131,8 +132,8 @@
         </div>
       </div>
       <!-- button od see all instructors -->
-      <div class="btn-courses d-flex justify-content-center">
-        <button class=" btn btn-all-courses mt-4 btn-lg" routerLink="/instructors">
+      <div class="btn-courses btn-instructors d-flex justify-content-center">
+        <button class=" btn btn-all-courses  mt-4 btn-lg" routerLink="/instructors">
           See All Instructors
         </button>
       </div>

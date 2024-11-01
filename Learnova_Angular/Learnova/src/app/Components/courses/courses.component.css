@@ -55,7 +55,7 @@ body {
 }
 @media (max-height: 600px) {
   .card {
-    font-size: 14px; /* تصغير حجم النص على الشاشات الصغيرة */
+    font-size: 14px;
   }
 }
 .card:hover {
@@ -97,9 +97,15 @@ body {
   gap: 20px; /* مسافة بين البطاقات */
   padding: 20px; /* مسافة داخلية حول الشبكة */
   background-color: #000000;
+
 }
 @media (max-width: 600px) {
   .card {
+    margin-left: 50px;
+
     font-size: 14px; /* تصغير حجم النص على الشاشات الصغيرة */
+  }
+  .heading {
+  margin-right: 40px;
   }
 }
