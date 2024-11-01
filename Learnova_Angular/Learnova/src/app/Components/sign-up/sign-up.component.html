@@ -47,8 +47,9 @@
                 minlength="3"
                 [ngClass]="{
                   'is-invalid':
-                    signupForm.controls['firstName']?.invalid &&
-                    signupForm.controls['firstName']?.touched
+                    signupForm.controls['firstName'] &&
+                    signupForm.controls['firstName'].invalid &&
+                    signupForm.controls['firstName'].touched
                 }"
               />
               <div
@@ -75,8 +76,9 @@
                 minlength="3"
                 [ngClass]="{
                   'is-invalid':
-                    signupForm.controls['lastName']?.invalid &&
-                    signupForm.controls['lastName']?.touched
+                    signupForm.controls['lastName'] &&
+                    signupForm.controls['lastName'].invalid &&
+                    signupForm.controls['lastName'].touched
                 }"
               />
               <div
@@ -86,7 +88,7 @@
                 "
                 class="invalid-feedback"
               >
-                Last Name  not matched .
+                Last Name not matched .
               </div>
             </div>
           </div>
@@ -103,8 +105,9 @@
                 required
                 [ngClass]="{
                   'is-invalid':
-                    signupForm.controls['email']?.invalid &&
-                    signupForm.controls['email']?.touched
+                    signupForm.controls['email'] &&
+                    signupForm.controls['email'].invalid &&
+                    signupForm.controls['email'].touched
                 }"
               />
               <div
@@ -129,8 +132,9 @@
                 [pattern]="email"
                 [ngClass]="{
                   'is-invalid':
+                    signupForm.controls['confirmEmail'] &&
                     confirmEmail !== email &&
-                    signupForm.controls['confirmEmail']?.touched
+                    signupForm.controls['confirmEmail'].touched
                 }"
               />
               <div
@@ -159,8 +163,9 @@
                 minlength="8"
                 [ngClass]="{
                   'is-invalid':
-                    signupForm.controls['password']?.invalid &&
-                    signupForm.controls['password']?.touched
+                    signupForm.controls['password'] &&
+                    signupForm.controls['password'].invalid &&
+                    signupForm.controls['password'].touched
                 }"
               />
               <div
@@ -189,8 +194,9 @@
                 [pattern]="password"
                 [ngClass]="{
                   'is-invalid':
+                    signupForm.controls['confirmPassword'] &&
                     confirmPassword !== password &&
-                    signupForm.controls['confirmPassword']?.touched
+                    signupForm.controls['confirmPassword'].touched
                 }"
               />
               <div
@@ -221,8 +227,9 @@
                 maxlength="11"
                 [ngClass]="{
                   'is-invalid':
-                    signupForm.controls['phone']?.invalid &&
-                    signupForm.controls['phone']?.touched
+                    signupForm.controls['phone'] &&
+                    signupForm.controls['phone'].invalid &&
+                    signupForm.controls['phone'].touched
                 }"
               />
               <div
@@ -249,8 +256,9 @@
                 required
                 [ngClass]="{
                   'is-invalid':
+                    signupForm.controls['profilePicture'] &&
                     !profilePicture &&
-                    signupForm.controls['profilePicture']?.touched
+                    signupForm.controls['profilePicture'].touched
                 }"
               />
               <div
@@ -283,9 +291,9 @@
                   pattern="^[a-zA-Z\s]+$"
                   [ngClass]="{
                     'is-invalid':
-                      signupForm.controls['specialization']?.invalid &&
-                      (signupForm.controls['specialization']?.touched ||
-                        signupForm.submitted)
+                      signupForm.controls['specialization'] &&
+                      signupForm.controls['specialization'].invalid &&
+                      signupForm.controls['specialization'].touched
                   }"
                 />
                 <div
@@ -315,15 +323,16 @@
                   max="50"
                   [ngClass]="{
                     'is-invalid':
-                      signupForm.controls['experience']?.invalid &&
-                      (signupForm.controls['experience']?.touched ||
-                        signupForm.submitted)
+                      signupForm.controls['experience'] &&
+                      signupForm.controls['experience'].invalid &&
+                      signupForm.controls['experience'].touched
                   }"
                 />
                 <div
                   *ngIf="
-                    signupForm.controls['experience']?.invalid &&
-                    signupForm.controls['experience']?.touched
+                    signupForm.controls['experience'] &&
+                    signupForm.controls['experience'].invalid &&
+                    signupForm.controls['experience'].touched
                   "
                   class="invalid-feedback"
                 >
@@ -346,15 +355,16 @@
                   pattern="^\d+$"
                   [ngClass]="{
                     'is-invalid':
-                      signupForm.controls['nationalId']?.invalid &&
-                      (signupForm.controls['nationalId']?.touched ||
-                        signupForm.submitted)
+                      signupForm.controls['nationalId'] &&
+                      signupForm.controls['nationalId'].invalid &&
+                      signupForm.controls['nationalId'].touched
                   }"
                 />
                 <div
                   *ngIf="
-                    signupForm.controls['nationalId']?.invalid &&
-                    signupForm.controls['nationalId']?.touched
+                    signupForm.controls['nationalId'] &&
+                    signupForm.controls['nationalId'].invalid &&
+                    signupForm.controls['nationalId'].touched
                   "
                   class="invalid-feedback"
                 >
@@ -374,9 +384,9 @@
                   pattern="^[a-zA-Z\s]+$"
                   [ngClass]="{
                     'is-invalid':
-                      signupForm.controls['country']?.invalid &&
-                      (signupForm.controls['country']?.touched ||
-                        signupForm.submitted)
+                      signupForm.controls['country'] &&
+                      signupForm.controls['country'].invalid &&
+                      signupForm.controls['country'].touched
                   }"
                 />
                 <div
