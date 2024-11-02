@@ -5,11 +5,6 @@
   width: 250px;
   background: rgb(65, 65, 65);
 }
-
-/* عندما يكون .toggled مضافًا، يتم إظهار الشريط الجانبي */
-#wrapper.toggled #sidebar-wrapper {
-  margin-left: 50px; /* الشريط الجانبي ظاهر */
-}
 .border-right,
 .list-group {
 
@@ -54,10 +49,6 @@ a:hover {
   width: 100%;
   padding: 20px;
 }
-h2 {
-  color: rgb(255, 111, 0);
-  margin-bottom: 50px;
-}
 .instname {
   color: white;
   font-weight: bold;
@@ -75,6 +66,6 @@ p {
 /* عندما تكون الشاشة كبيرة (أكبر من 768px)، الشريط الجانبي يكون ظاهر دائمًا */
 @media (min-width: 768px) {
   #sidebar-wrapper {
-    margin-left: 0;
+    
   }
 }

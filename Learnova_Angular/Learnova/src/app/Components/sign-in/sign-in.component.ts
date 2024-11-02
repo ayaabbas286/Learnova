@@ -53,7 +53,7 @@ export class SignInComponent {
       localStorage.setItem('currentUser', JSON.stringify(user));
 
       if (user.role === 'student') {
-        this.router.navigate(['/student']);
+        this.router.navigate(['/StudentDashboard']);
       } else if (user.role === 'teacher') {
         this.router.navigate(['/InstDAshBoard']);
       }

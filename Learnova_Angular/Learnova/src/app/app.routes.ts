@@ -18,6 +18,7 @@ import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { SignInComponent } from './Components/sign-in/sign-in.component';
 import { CoursePaymentComponent } from './Components/course-payment/course-payment.component';
 import { PrivacyComponent } from './Components/privacy/privacy.component';
+import { StudentDashboardComponent } from './Components/student-dashboard/student-dashboard.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -47,6 +48,7 @@ export const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'main-payment', component: MainPaymentComponent },
   { path: 'InstDAshBoard', component: InstDAshBoardComponent },
+  {path:'StudentDashboard',component:StudentDashboardComponent},
   { path: 'Privacy', component: PrivacyComponent },
   { path: '**', component: ErrorComponent },
 ];
