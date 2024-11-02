@@ -74,10 +74,11 @@
   width: 30px;
   background-color: #00000000;
 }
+
 .carousel-control-prev {
   background-color: #00000000;
   margin-left: -20px;
-  margin-top: 18px;
+  margin-top: 13px;
   height: 270px;
   /* border-radius: 10px; */
   width: 30px;
