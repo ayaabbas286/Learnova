@@ -13,6 +13,9 @@ body {
 .container {
   background-color: #000000;
 }
+.card-title{
+  color: orangered;
+}
 .card {
   padding: 3px;
   background-color: rgb(10, 10, 10);

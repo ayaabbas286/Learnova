@@ -44,6 +44,9 @@ body {
 
   font-weight: 500;
 }
+.card-title{
+  color: orangered;
+}
 @media (max-height: 600px) {
   .card {
     font-size: 14px;
